@@ -22,7 +22,6 @@
 
 @interface BetweenDatesViewController()
 @property (nonatomic) Boolean firstSelected;
-
 - (void)betweenDates;
 - (void)fadeInResetButton;
 - (void)fadeOutResetButton;
@@ -103,6 +102,7 @@
     [_secondDateText setText:@""];
     [_answerInSwitch setSelectedSegmentIndex:0];
     [_answerText setText:@""];
+    [self.view endEditing:TRUE];
     [self fadeOutResetButton];
 }
 
@@ -157,7 +157,8 @@
         } else {
             [_answerText setText:[NSString stringWithFormat:@"%d", ((int)numDays / 7)]];
         }
-        
+
+        [self.view endEditing:TRUE];
         [self fadeInResetButton];
     }
 }
