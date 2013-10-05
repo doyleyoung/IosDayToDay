@@ -41,7 +41,7 @@
 @implementation FromDateViewController
 
 static CGFloat const ANIMATION_DURATION = 0.3f;
-static CGFloat const SELECT_BUTTON_WIDTH = 60.0f;
+static CGFloat const SELECT_BUTTON_MARGIN = 12.0f;
 
 
 #pragma mark - View lifecycle
@@ -98,13 +98,15 @@ static CGFloat const SELECT_BUTTON_WIDTH = 60.0f;
             frame.origin.y += self.fromDatePicker.frame.size.height * modifier;
             self.answerView.frame = frame;
             
+            CGFloat delta = self.selectButton.frame.size.width + SELECT_BUTTON_MARGIN;
+            
             modifier = show ? -1.0f : 1.0f;
             frame = self.fromDateField.frame;
-            frame.size.width += SELECT_BUTTON_WIDTH * modifier;
+            frame.size.width += delta * modifier;
             self.fromDateField.frame = frame;
             
             frame = self.fromDateFieldBorder.frame;
-            frame.size.width += SELECT_BUTTON_WIDTH * modifier;
+            frame.size.width += delta * modifier;
             self.fromDateFieldBorder.frame = frame;
             
             self.selectButton.alpha = show ? 1.0f : 0.0f;
