@@ -19,148 +19,107 @@
 
 #import "FromDateViewController.h"
 #import "DateWrap.h"
+#import "DateChooserViewController.h"
 
-@interface FromDateViewController()
-- (void)calculateDate;
-- (void)fadeInResetButton;
-- (void)fadeOutResetButton;
+
+#pragma mark - Private Interface
+
+@interface FromDateViewController() <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UITextField *numDaysField;
+@property (nonatomic, weak) IBOutlet UITextField *fromDateField;
+@property (nonatomic, weak) IBOutlet UIView *fromDateFieldBorder;
+@property (nonatomic, weak) IBOutlet UIButton *selectButton;
+@property (nonatomic, weak) IBOutlet UIDatePicker *fromDatePicker;
+@property (nonatomic, weak) IBOutlet UIView *answerView;
+@property (nonatomic, weak) IBOutlet UILabel *answerLabel;
+@property (nonatomic) BOOL fromDatePickerVisible;
 @end
 
-@implementation FromDateViewController
-@synthesize numDaysText = _numDaysText;
-@synthesize fromDateText = _fromDateText;
-@synthesize answerText = _answerText;
-@synthesize resetButton = _resetButton;
-@synthesize dateChooserVisible = _dateChooserVisible;
-@synthesize popover = _popover;
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
+#pragma mark - Implementation
+
+@implementation FromDateViewController
+
+static CGFloat const ANIMATION_DURATION = 0.3f;
+static CGFloat const SELECT_BUTTON_WIDTH = 60.0f;
+
 
 #pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    [_fromDateText addTarget:self action:@selector(textFieldFinished:) forControlEvents:UIControlEventEditingDidEndOnExit];
-    [_numDaysText addTarget:self action:@selector(checkTextField:) forControlEvents:UIControlEventEditingChanged];
-    [_fromDateText addTarget:self action:@selector(checkTextField:) forControlEvents:UIControlEventEditingChanged];
-    _resetButton.hidden = YES;
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self showDatePicker:NO];
 }
 
-- (void)viewDidUnload
-{
-    [self setNumDaysText:nil];
-    [self setFromDateText:nil];
-    [self setAnswerText:nil];
-    [self setResetButton:nil];
-    [super viewDidUnload];
-}
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([segue.identifier isEqualToString:@"pop_seg1"]) {
-        _popover = [(UIStoryboardPopoverSegue *)segue popoverController];
+#pragma mark - UITextFieldDelegate Methods
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    if (textField == self.fromDateField) {
+        [self.numDaysField resignFirstResponder];
+        [self showDatePicker:YES];
+        return NO;
+    } else if (textField == self.numDaysField) {
+        [self showDatePicker:NO];
     }
     
-    ((DateChooserViewController*)segue.destinationViewController).delegate = self;
+    return YES;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
-}
 
-#pragma mark - Actions
+#pragma mark - IBAction Methods
 
-- (IBAction)resetPressed:(id)sender {
-    [_numDaysText setText:@""];
-    [_fromDateText setText:@""];
-    [_answerText setText:@""];
-    [self.view endEditing:TRUE];
-    [self fadeOutResetButton];
-}
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [_numDaysText resignFirstResponder];
-}
-
-#pragma mark - Delegate methods
-
-- (void)setDate:(NSDate *)date {
-    if (_popover) {
-        [_popover dismissPopoverAnimated:YES];
-    }
- 
-    NSDateFormatter *formatter = [DateWrap getFormatter];
-    [_fromDateText setText:[formatter stringFromDate:date]];
+- (IBAction)dateSelected:(UIButton *)sender {
+    self.fromDateField.text = [[DateWrap getFormatter]
+                               stringFromDate:self.fromDatePicker.date];
+    [self showDatePicker:NO];
     [self calculateDate];
 }
 
-- (void)dateCancelled {
-    if (_popover) {
-        [_popover dismissPopoverAnimated:YES];
+- (IBAction)dateChanged:(UIDatePicker *)sender {
+    self.fromDateField.text = [[DateWrap getFormatter] stringFromDate:sender.date];
+    [self calculateDate];
+}
+
+- (IBAction)numberChanged:(UITextField *)sender {
+    [self calculateDate];
+}
+
+
+#pragma mark - Private Methods
+
+- (void)showDatePicker:(BOOL)show {
+    if (self.fromDatePickerVisible != show) {
+        self.fromDatePickerVisible = show;
+        self.selectButton.userInteractionEnabled = show;
+        [UIView animateWithDuration:ANIMATION_DURATION animations:^{
+            CGFloat modifier = show ? 1.0f : -1.0f;
+            CGRect frame = self.answerView.frame;
+            frame.origin.y += self.fromDatePicker.frame.size.height * modifier;
+            self.answerView.frame = frame;
+            
+            modifier = show ? -1.0f : 1.0f;
+            frame = self.fromDateField.frame;
+            frame.size.width += SELECT_BUTTON_WIDTH * modifier;
+            self.fromDateField.frame = frame;
+            
+            frame = self.fromDateFieldBorder.frame;
+            frame.size.width += SELECT_BUTTON_WIDTH * modifier;
+            self.fromDateFieldBorder.frame = frame;
+            
+            self.selectButton.alpha = show ? 1.0f : 0.0f;
+        }];
     }
 }
-
-#pragma mark - Text field interaction
-
-- (IBAction)textFieldFinished:(id)sender {
-    [self.view endEditing:TRUE];
-    [sender resignFirstResponder];
-}
-
-- (void)checkTextField:(id)sender {
-    UITextField *textField = (UITextField *)sender;
-    if ([textField.text length] > 0) {
-        [self calculateDate];
-    }
-}
-
-#pragma mark - Private helpers
 
 - (void)calculateDate {
-    if (![@"" isEqualToString:[_numDaysText text]] &&
-        ([_fromDateText text] != nil && ![@"" isEqualToString:[_fromDateText text]])) {
-        NSString *fromDate = [DateWrap fromDate:[_numDaysText text] date:[_fromDateText text]];
-
-        if(fromDate == nil) {
-            _fromDateText.layer.borderWidth = 1;
-            _fromDateText.layer.borderColor = [[UIColor redColor] CGColor];
-        } else {
-            _fromDateText.layer.borderWidth = 0;
-            [_answerText setText:fromDate];
-            [self fadeInResetButton];
-        }
-    }
-}
-
-- (void)fadeInResetButton {
-    if(_resetButton.hidden == YES) {
-        CATransition *animation = [CATransition animation];
-        animation.type = kCATransitionFade;
-        animation.duration = 0.4;
-        [_resetButton.layer addAnimation:animation forKey:nil];
-        
-        _resetButton.hidden = NO;
-    }
-}
-
-- (void)fadeOutResetButton {
-    if(_resetButton.hidden == NO) {
-        CATransition *animation = [CATransition animation];
-        animation.type = kCATransitionFade;
-        animation.duration = 0.8;
-        [_resetButton.layer addAnimation:animation forKey:nil];
-        
-        _resetButton.hidden = YES;
+    if (![self.numDaysField.text isEqualToString:@""]
+        && ![self.fromDateField.text isEqualToString:@""]) {
+        NSString *date = [DateWrap fromDate:self.numDaysField.text
+                                       date:self.fromDateField.text];
+        self.answerLabel.text = date;
+    } else {
+        self.answerLabel.text = @"";
     }
 }
 
