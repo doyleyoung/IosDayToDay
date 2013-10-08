@@ -22,23 +22,4 @@
 
 @interface BetweenDatesViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITextField *firstDateText;
-@property (weak, nonatomic) IBOutlet UITextField *secondDateText;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *answerInSwitch;
-@property (weak, nonatomic) IBOutlet UILabel *answerText;
-@property (weak, nonatomic) IBOutlet UIButton *resetButton;
-@property (nonatomic) Boolean dateChooserVisible;
-@property (weak, nonatomic) UIPopoverController *popover;
-
-- (IBAction)firstDatePickPressed:(id)sender;
-- (IBAction)secondDatePickPressed:(id)sender;
-- (IBAction)textFieldFinished:(id)sender;
-- (IBAction)resetPressed:(id)sender;
-
-- (void)checkTextField:(id)sender;
-- (void)answerInSelected:(id)sender;
-
-- (void)setDate:(NSDate *)date;
-- (void)dateCancelled;
-
 @end

@@ -92,7 +92,8 @@ static CGFloat const SELECT_BUTTON_MARGIN = 12.0f;
     if (self.fromDatePickerVisible != show) {
         self.fromDatePickerVisible = show;
         self.selectButton.userInteractionEnabled = show;
-        [UIView animateWithDuration:ANIMATION_DURATION animations:^{
+        
+        id animations = ^{
             CGFloat modifier = show ? 1.0f : -1.0f;
             CGRect frame = self.answerView.frame;
             frame.origin.y += self.fromDatePicker.frame.size.height * modifier;
@@ -110,7 +111,13 @@ static CGFloat const SELECT_BUTTON_MARGIN = 12.0f;
             self.fromDateFieldBorder.frame = frame;
             
             self.selectButton.alpha = show ? 1.0f : 0.0f;
-        }];
+        };
+        
+        [UIView animateWithDuration:ANIMATION_DURATION
+                              delay:0.0f
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:animations
+                         completion:NULL];
     }
 }
 

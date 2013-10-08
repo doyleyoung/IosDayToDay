@@ -21,6 +21,11 @@
 
 @interface DateWrap : NSObject
 + (NSString *)fromDate:(NSString *)numDays date:(NSString *)date;
-+ (int)daysBetweenDates:(NSString *)firstDate secondDate:(NSString *)secondDate;
++ (NSInteger)daysBetweenDates:(NSString *)firstDate
+                   secondDate:(NSString *)secondDate;
++ (NSInteger)weeksBetweenDates:(NSString *)firstDate
+                    secondDate:(NSString *)secondDate;
++ (NSInteger)monthsBetweenDates:(NSString *)firstDate
+                     secondDate:(NSString *)secondDate;
 + (NSDateFormatter *)getFormatter;
 @end
