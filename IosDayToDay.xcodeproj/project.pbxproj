@@ -31,7 +31,6 @@
 		CAA506E015563224001F2508 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAA506DE15563224001F2508 /* InfoPlist.strings */; };
 		CAA506E215563224001F2508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506E115563224001F2508 /* main.m */; };
 		CAA506E615563224001F2508 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506E515563224001F2508 /* AppDelegate.m */; };
-		CAA506EC15563224001F2508 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA506EA15563224001F2508 /* MainStoryboard_iPad.storyboard */; };
 		CAA506EF15563224001F2508 /* FromDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506EE15563224001F2508 /* FromDateViewController.m */; };
 		CAA506F615563224001F2508 /* BetweenDatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506F515563224001F2508 /* BetweenDatesViewController.m */; };
 		CAA5070215563224001F2508 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA5070115563224001F2508 /* SenTestingKit.framework */; };
@@ -80,7 +79,6 @@
 		CAA506E315563224001F2508 /* IosDayToDay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IosDayToDay-Prefix.pch"; sourceTree = "<group>"; };
 		CAA506E415563224001F2508 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CAA506E515563224001F2508 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CAA506EB15563224001F2508 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		CAA506ED15563224001F2508 /* FromDateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FromDateViewController.h; sourceTree = "<group>"; };
 		CAA506EE15563224001F2508 /* FromDateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FromDateViewController.m; sourceTree = "<group>"; };
 		CAA506F415563224001F2508 /* BetweenDatesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BetweenDatesViewController.h; sourceTree = "<group>"; };
@@ -181,13 +179,11 @@
 			children = (
 				F3600BFA17FFA15D0064DE2F /* Date Math */,
 				F3600BF917FFA1330064DE2F /* Controllers */,
+				F357D7711803BC10009176A7 /* Storyboards */,
 				CAA506E415563224001F2508 /* AppDelegate.h */,
 				CAA506E515563224001F2508 /* AppDelegate.m */,
-				CAA506EA15563224001F2508 /* MainStoryboard_iPad.storyboard */,
 				F3600BF717FF9F8A0064DE2F /* Images.xcassets */,
 				CAA506DC15563224001F2508 /* Supporting Files */,
-				F3600BFB17FFA52E0064DE2F /* iPhone.storyboard */,
-				F357D76F1803AED6009176A7 /* iPad.storyboard */,
 			);
 			path = IosDayToDay;
 			sourceTree = "<group>";
@@ -220,6 +216,15 @@
 				CAA5070A15563224001F2508 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F357D7711803BC10009176A7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F3600BFB17FFA52E0064DE2F /* iPhone.storyboard */,
+				F357D76F1803AED6009176A7 /* iPad.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		F3600BF917FFA1330064DE2F /* Controllers */ = {
@@ -316,7 +321,6 @@
 				F3600BFC17FFA52E0064DE2F /* iPhone.storyboard in Resources */,
 				CA9D13D616AF89BF0012F918 /* between_dates_32x32.png in Resources */,
 				CA9D13DA16AF8E330012F918 /* Default-568h@2x.png in Resources */,
-				CAA506EC15563224001F2508 /* MainStoryboard_iPad.storyboard in Resources */,
 				CA9D13E716B0CA520012F918 /* Default.png in Resources */,
 				CAA5072015594E31001F2508 /* calendar_32x32.png in Resources */,
 				CA5F57E0168B2B33003E40F2 /* DayToDayIOS114.png in Resources */,
@@ -402,14 +406,6 @@
 				CAA506DF15563224001F2508 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CAA506EA15563224001F2508 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAA506EB15563224001F2508 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		CAA5070A15563224001F2508 /* InfoPlist.strings */ = {
