@@ -50,6 +50,11 @@ static CGFloat const SELECT_BUTTON_MARGIN = 12.0f;
     [self showDatePicker:NO];
 }
 
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)orientation
+                                duration:(NSTimeInterval)duration {
+    [self showDatePicker:NO];
+}
+
 
 #pragma mark - UITextFieldDelegate Methods
 
