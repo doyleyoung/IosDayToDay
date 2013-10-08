@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA18904316471CB400C40B6C /* DateChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA18904216471CB400C40B6C /* DateChooserViewController.m */; };
-		CA1890491647574100C40B6C /* DateChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA18904216471CB400C40B6C /* DateChooserViewController.m */; };
 		CA5F340A1696837C0053FBD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5F34091696837C0053FBD2 /* QuartzCore.framework */; };
 		CA5F57E0168B2B33003E40F2 /* DayToDayIOS114.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5F57DF168B2B33003E40F2 /* DayToDayIOS114.png */; };
 		CA5F57E3168B2B74003E40F2 /* DayToDayIOS57.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5F57E2168B2B74003E40F2 /* DayToDayIOS57.png */; };
@@ -33,7 +31,6 @@
 		CAA506E015563224001F2508 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAA506DE15563224001F2508 /* InfoPlist.strings */; };
 		CAA506E215563224001F2508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506E115563224001F2508 /* main.m */; };
 		CAA506E615563224001F2508 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506E515563224001F2508 /* AppDelegate.m */; };
-		CAA506E915563224001F2508 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA506E715563224001F2508 /* MainStoryboard_iPhone.storyboard */; };
 		CAA506EC15563224001F2508 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA506EA15563224001F2508 /* MainStoryboard_iPad.storyboard */; };
 		CAA506EF15563224001F2508 /* FromDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506EE15563224001F2508 /* FromDateViewController.m */; };
 		CAA506F615563224001F2508 /* BetweenDatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506F515563224001F2508 /* BetweenDatesViewController.m */; };
@@ -44,6 +41,7 @@
 		CAA5070F15563224001F2508 /* IosDayToDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA5070E15563224001F2508 /* IosDayToDayTests.m */; };
 		CAA5072015594E31001F2508 /* calendar_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA5071F15594E31001F2508 /* calendar_32x32.png */; };
 		CAE583D1155A10FA00D9BC3A /* DateWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE583D0155A10FA00D9BC3A /* DateWrap.m */; };
+		F357D7701803AED6009176A7 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F357D76F1803AED6009176A7 /* iPad.storyboard */; };
 		F3600BF817FF9F8A0064DE2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3600BF717FF9F8A0064DE2F /* Images.xcassets */; };
 		F3600BFC17FFA52E0064DE2F /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3600BFB17FFA52E0064DE2F /* iPhone.storyboard */; };
 /* End PBXBuildFile section */
@@ -59,8 +57,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CA18904116471CB400C40B6C /* DateChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateChooserViewController.h; sourceTree = "<group>"; };
-		CA18904216471CB400C40B6C /* DateChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateChooserViewController.m; sourceTree = "<group>"; };
 		CA5F34091696837C0053FBD2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CA5F57DF168B2B33003E40F2 /* DayToDayIOS114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DayToDayIOS114.png; sourceTree = "<group>"; };
 		CA5F57E2168B2B74003E40F2 /* DayToDayIOS57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DayToDayIOS57.png; sourceTree = "<group>"; };
@@ -84,7 +80,6 @@
 		CAA506E315563224001F2508 /* IosDayToDay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IosDayToDay-Prefix.pch"; sourceTree = "<group>"; };
 		CAA506E415563224001F2508 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CAA506E515563224001F2508 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CAA506E815563224001F2508 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		CAA506EB15563224001F2508 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		CAA506ED15563224001F2508 /* FromDateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FromDateViewController.h; sourceTree = "<group>"; };
 		CAA506EE15563224001F2508 /* FromDateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FromDateViewController.m; sourceTree = "<group>"; };
@@ -99,6 +94,7 @@
 		CAA5071F15594E31001F2508 /* calendar_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar_32x32.png; path = IosDayToDay/calendar_32x32.png; sourceTree = "<group>"; };
 		CAE583CF155A10FA00D9BC3A /* DateWrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateWrap.h; sourceTree = "<group>"; };
 		CAE583D0155A10FA00D9BC3A /* DateWrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateWrap.m; sourceTree = "<group>"; };
+		F357D76F1803AED6009176A7 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
 		F3600BF717FF9F8A0064DE2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F3600BFB17FFA52E0064DE2F /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -187,11 +183,11 @@
 				F3600BF917FFA1330064DE2F /* Controllers */,
 				CAA506E415563224001F2508 /* AppDelegate.h */,
 				CAA506E515563224001F2508 /* AppDelegate.m */,
-				CAA506E715563224001F2508 /* MainStoryboard_iPhone.storyboard */,
 				CAA506EA15563224001F2508 /* MainStoryboard_iPad.storyboard */,
 				F3600BF717FF9F8A0064DE2F /* Images.xcassets */,
 				CAA506DC15563224001F2508 /* Supporting Files */,
 				F3600BFB17FFA52E0064DE2F /* iPhone.storyboard */,
+				F357D76F1803AED6009176A7 /* iPad.storyboard */,
 			);
 			path = IosDayToDay;
 			sourceTree = "<group>";
@@ -233,8 +229,6 @@
 				CAA506EE15563224001F2508 /* FromDateViewController.m */,
 				CAA506F415563224001F2508 /* BetweenDatesViewController.h */,
 				CAA506F515563224001F2508 /* BetweenDatesViewController.m */,
-				CA18904116471CB400C40B6C /* DateChooserViewController.h */,
-				CA18904216471CB400C40B6C /* DateChooserViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -320,7 +314,6 @@
 			files = (
 				CAA506E015563224001F2508 /* InfoPlist.strings in Resources */,
 				F3600BFC17FFA52E0064DE2F /* iPhone.storyboard in Resources */,
-				CAA506E915563224001F2508 /* MainStoryboard_iPhone.storyboard in Resources */,
 				CA9D13D616AF89BF0012F918 /* between_dates_32x32.png in Resources */,
 				CA9D13DA16AF8E330012F918 /* Default-568h@2x.png in Resources */,
 				CAA506EC15563224001F2508 /* MainStoryboard_iPad.storyboard in Resources */,
@@ -329,6 +322,7 @@
 				CA5F57E0168B2B33003E40F2 /* DayToDayIOS114.png in Resources */,
 				CA5F57E3168B2B74003E40F2 /* DayToDayIOS57.png in Resources */,
 				CA9D8069168BF00C00B97C2A /* DayToDayIOS72.png in Resources */,
+				F357D7701803AED6009176A7 /* iPad.storyboard in Resources */,
 				CA9D806B168BF01000B97C2A /* DayToDayIOS144.png in Resources */,
 				F3600BF817FF9F8A0064DE2F /* Images.xcassets in Resources */,
 				CA9D13DD16AF8FE30012F918 /* Default@2x.png in Resources */,
@@ -380,7 +374,6 @@
 				CAA506EF15563224001F2508 /* FromDateViewController.m in Sources */,
 				CAA506F615563224001F2508 /* BetweenDatesViewController.m in Sources */,
 				CAE583D1155A10FA00D9BC3A /* DateWrap.m in Sources */,
-				CA1890491647574100C40B6C /* DateChooserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,7 +382,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAA5070F15563224001F2508 /* IosDayToDayTests.m in Sources */,
-				CA18904316471CB400C40B6C /* DateChooserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,14 +402,6 @@
 				CAA506DF15563224001F2508 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CAA506E715563224001F2508 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAA506E815563224001F2508 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		CAA506EA15563224001F2508 /* MainStoryboard_iPad.storyboard */ = {

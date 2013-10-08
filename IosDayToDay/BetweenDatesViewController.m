@@ -20,6 +20,9 @@
 #import "BetweenDatesViewController.h"
 #import "DateWrap.h"
 
+
+#pragma mark - Private Interface
+
 @interface BetweenDatesViewController() <UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UITextField *beginDateField;
 @property (nonatomic, weak) IBOutlet UIButton *beginDateSelectButton;
@@ -37,16 +40,25 @@
 @property (nonatomic) BOOL endDatePickerVisible;
 @end
 
+
+#pragma mark - Implementation
+
 @implementation BetweenDatesViewController
 
 static CGFloat const ANIMATION_DURATION = 0.3f;
 static CGFloat const SELECT_BUTTON_MARGIN = 12.0f;
+
+
+#pragma mark - View Lifecycle
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self showBeginDatePicker:NO];
     [self showEndDatePicker:NO];
 }
+
+
+#pragma mark - UITextFieldDelegate Methods
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
     if (textField == self.beginDateField) {
@@ -60,6 +72,61 @@ static CGFloat const SELECT_BUTTON_MARGIN = 12.0f;
     }
     
     return NO;
+}
+
+
+#pragma mark - IBAction Methods
+
+- (IBAction)dateSelected:(UIButton *)sender {
+    if (sender == self.beginDateSelectButton) {
+        self.beginDateField.text = [[DateWrap getFormatter]
+                                    stringFromDate:self.beginDatePicker.date];
+        [self showBeginDatePicker:NO];
+    } else if (sender == self.endDateSelectButton) {
+        self.endDateField.text = [[DateWrap getFormatter]
+                                  stringFromDate:self.endDatePicker.date];
+        [self showEndDatePicker:NO];
+    }
+    
+    [self calculateTimeBetween];
+}
+
+- (IBAction)dateChanged:(UIDatePicker *)sender {
+    if (sender == self.beginDatePicker) {
+        self.beginDateField.text = [[DateWrap getFormatter] stringFromDate:sender.date];
+    } else if (sender == self.endDatePicker) {
+        self.endDateField.text = [[DateWrap getFormatter] stringFromDate:sender.date];
+    }
+    
+    [self calculateTimeBetween];
+}
+
+- (IBAction)unitChanged:(UISegmentedControl *)sender {
+    [self calculateTimeBetween];
+}
+
+
+#pragma mark - Private Methods
+
+- (void)calculateTimeBetween {
+    if (![self.beginDateField.text isEqualToString:@""]
+        && ![self.endDateField.text isEqualToString:@""]) {
+        NSString *begin = self.beginDateField.text;
+        NSString *end = self.endDateField.text;
+        NSInteger units = 0;
+        if (self.unitControl.selectedSegmentIndex == 0) {
+            units = [DateWrap daysBetweenDates:begin secondDate:end];
+        } else if (self.unitControl.selectedSegmentIndex == 1) {
+            units = [DateWrap weeksBetweenDates:begin secondDate:end];
+        } else if (self.unitControl.selectedSegmentIndex == 2) {
+            units = [DateWrap monthsBetweenDates:begin secondDate:end];
+        }
+        
+        self.answerLabel.text = [NSString stringWithFormat:@"%d", units];
+        self.unitControl.hidden = NO;
+    } else {
+        self.answerLabel.text = @"";
+    }
 }
 
 - (void)showBeginDatePicker:(BOOL)show {
@@ -125,55 +192,6 @@ static CGFloat const SELECT_BUTTON_MARGIN = 12.0f;
                             options:UIViewAnimationOptionCurveEaseOut
                          animations:animations
                          completion:NULL];
-    }
-}
-
-- (IBAction)dateSelected:(UIButton *)sender {
-    if (sender == self.beginDateSelectButton) {
-        self.beginDateField.text = [[DateWrap getFormatter]
-                                    stringFromDate:self.beginDatePicker.date];
-        [self showBeginDatePicker:NO];
-    } else if (sender == self.endDateSelectButton) {
-        self.endDateField.text = [[DateWrap getFormatter]
-                                  stringFromDate:self.endDatePicker.date];
-        [self showEndDatePicker:NO];
-    }
-    
-    [self calculateTimeBetween];
-}
-
-- (IBAction)dateChanged:(UIDatePicker *)sender {
-    if (sender == self.beginDatePicker) {
-        self.beginDateField.text = [[DateWrap getFormatter] stringFromDate:sender.date];
-    } else if (sender == self.endDatePicker) {
-        self.endDateField.text = [[DateWrap getFormatter] stringFromDate:sender.date];
-    }
-    
-    [self calculateTimeBetween];
-}
-
-- (IBAction)unitChanged:(UISegmentedControl *)sender {
-    [self calculateTimeBetween];
-}
-
-- (void)calculateTimeBetween {
-    if (![self.beginDateField.text isEqualToString:@""]
-        && ![self.endDateField.text isEqualToString:@""]) {
-        NSString *begin = self.beginDateField.text;
-        NSString *end = self.endDateField.text;
-        NSInteger units = 0;
-        if (self.unitControl.selectedSegmentIndex == 0) {
-            units = [DateWrap daysBetweenDates:begin secondDate:end];
-        } else if (self.unitControl.selectedSegmentIndex == 1) {
-            units = [DateWrap weeksBetweenDates:begin secondDate:end];
-        } else if (self.unitControl.selectedSegmentIndex == 2) {
-            units = [DateWrap monthsBetweenDates:begin secondDate:end];
-        }
-        
-        self.answerLabel.text = [NSString stringWithFormat:@"%d", units];
-        self.unitControl.hidden = NO;
-    } else {
-        self.answerLabel.text = @"";
     }
 }
 
