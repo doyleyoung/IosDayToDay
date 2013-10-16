@@ -25,6 +25,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window.tintColor = [UIColor colorWithRed:168.0f/255.0f
+                                            green:5.0f/255.0f
+                                             blue:0.0f/255.0f
+                                            alpha:1.0f];
     return YES;
 }
 
