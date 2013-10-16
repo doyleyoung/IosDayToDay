@@ -20,7 +20,7 @@
 #import "DateWrap.h"
 #import <math.h>
 
-static NSString *const DATE_FORMAT = @"MM/dd/yyyy";
+static NSString * const DATE_TEMPLATE = @"MMddyyyy";
 
 @implementation DateWrap
 
@@ -28,8 +28,7 @@ static NSString *const DATE_FORMAT = @"MM/dd/yyyy";
  * Calculate date which is numDays from given date and return it as a string.
  */
 + (NSString *)fromDate:(NSString *)numDays date:(NSString *)date {    
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:DATE_FORMAT];
+    NSDateFormatter *dateFormat = [DateWrap getFormatter];
     
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
@@ -92,8 +91,7 @@ static NSString *const DATE_FORMAT = @"MM/dd/yyyy";
 + (NSDateComponents *)componentsBetweenDates:(NSString *)firstDate
                                   secondDate:(NSString *)secondDate
                                        units:(NSUInteger)unitFlags {
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:DATE_FORMAT];
+    NSDateFormatter *dateFormat = [DateWrap getFormatter];
     
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
@@ -113,11 +111,14 @@ static NSString *const DATE_FORMAT = @"MM/dd/yyyy";
 }
 
 /**
- * Get a date formatter populated with the standard date format.
+ * Get a date formatter populated with the localized date format.
  */
 + (NSDateFormatter *)getFormatter {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:DATE_FORMAT];
+    formatter.dateFormat =
+    [NSDateFormatter dateFormatFromTemplate:DATE_TEMPLATE
+                                    options:0
+                                     locale:[NSLocale currentLocale]];
     return formatter;
 }
 

@@ -45,6 +45,11 @@ static CGFloat const SELECT_BUTTON_MARGIN = 12.0f;
 
 #pragma mark - View lifecycle
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.fromDateField.placeholder = [[DateWrap getFormatter].dateFormat lowercaseString];
+}
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [self showDatePicker:NO];
