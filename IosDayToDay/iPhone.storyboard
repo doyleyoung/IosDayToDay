@@ -196,7 +196,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <constraint firstItem="KTn-Rh-l0H" firstAttribute="top" secondItem="veK-eU-FEH" secondAttribute="bottom" constant="10" id="vTX-TX-hdV"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="From Date" image="calendar_32x32.png" id="xTn-nq-2eD"/>
+                    <tabBarItem key="tabBarItem" title="From Date" image="tabbaricon_fromdate" id="xTn-nq-2eD"/>
                     <connections>
                         <outlet property="answerLabel" destination="3ct-oF-YBH" id="ajz-v5-daA"/>
                         <outlet property="answerView" destination="Chb-wG-h0d" id="fxF-R0-6kM"/>
@@ -503,7 +503,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                             <constraint firstItem="7I8-4c-a42" firstAttribute="top" secondItem="zEV-EQ-EeB" secondAttribute="bottom" constant="22" id="rJT-gP-gcn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Between Dates" image="between_dates_32x32.png" id="tff-U6-HyZ"/>
+                    <tabBarItem key="tabBarItem" title="Between Dates" image="tabbaricon_betweendates" id="tff-U6-HyZ"/>
                     <connections>
                         <outlet property="answerLabel" destination="3dS-HS-BBV" id="flh-fK-AxK"/>
                         <outlet property="answerView" destination="62y-0P-2Hz" id="6h7-EY-F8L"/>
@@ -525,8 +525,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
-        <image name="between_dates_32x32.png" width="32" height="32"/>
-        <image name="calendar_32x32.png" width="32" height="32"/>
+        <image name="tabbaricon_betweendates" width="25" height="25"/>
+        <image name="tabbaricon_fromdate" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -204,7 +204,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="From Date" image="calendar_32x32.png" id="gqL-Ug-1Pf"/>
+                    <tabBarItem key="tabBarItem" title="From Date" image="tabbaricon_fromdate" id="gqL-Ug-1Pf"/>
                     <connections>
                         <outlet property="answerLabel" destination="giT-t2-iTq" id="0tv-AD-iyP"/>
                         <outlet property="answerView" destination="iAr-DZ-Lqg" id="MYt-mG-s1x"/>
@@ -530,7 +530,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Between Dates" image="between_dates_32x32.png" id="Vfv-fH-Kmj"/>
+                    <tabBarItem key="tabBarItem" title="Between Dates" image="tabbaricon_betweendates" id="Vfv-fH-Kmj"/>
                     <connections>
                         <outlet property="answerLabel" destination="c7b-z9-Hlw" id="yNe-La-xZa"/>
                         <outlet property="answerView" destination="pZp-jh-0g8" id="SCX-bs-PoU"/>
@@ -552,8 +552,8 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
-        <image name="between_dates_32x32.png" width="32" height="32"/>
-        <image name="calendar_32x32.png" width="32" height="32"/>
+        <image name="tabbaricon_betweendates" width="25" height="25"/>
+        <image name="tabbaricon_fromdate" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="lightContent"/>
