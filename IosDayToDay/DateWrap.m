@@ -20,7 +20,7 @@
 #import "DateWrap.h"
 #import <math.h>
 
-static NSString *const DATE_FORMAT = @"MM/dd/yyyy";
+static NSString * const DATE_TEMPLATE = @"MMddyyyy";
 
 @implementation DateWrap
 
@@ -28,8 +28,7 @@ static NSString *const DATE_FORMAT = @"MM/dd/yyyy";
  * Calculate date which is numDays from given date and return it as a string.
  */
 + (NSString *)fromDate:(NSString *)numDays date:(NSString *)date {    
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:DATE_FORMAT];
+    NSDateFormatter *dateFormat = [DateWrap getFormatter];
     
     NSCalendar *gregorian = [[NSCalendar alloc]
                              initWithCalendarIdentifier:NSGregorianCalendar];
@@ -50,22 +49,12 @@ static NSString *const DATE_FORMAT = @"MM/dd/yyyy";
 /**
  * Calculate the number of days between the given dates and return it as an int.
  */
-+ (int)daysBetweenDates:(NSString *)firstDate secondDate:(NSString *)secondDate {
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:DATE_FORMAT];
-    
-    NSCalendar *gregorian = [[NSCalendar alloc]
-                             initWithCalendarIdentifier:NSGregorianCalendar];
-    NSUInteger unitFlags = NSDayCalendarUnit;
-
-    NSDate *fromDate = [dateFormat dateFromString:firstDate];
-    NSDate *toDate = [dateFormat dateFromString:secondDate];
-    
-    if(fromDate != nil && toDate != nil) {
-        NSDateComponents *components = [gregorian components:unitFlags
-                                                    fromDate:fromDate
-                                                      toDate:toDate
-                                                     options:0];
++ (NSInteger)daysBetweenDates:(NSString *)firstDate
+                   secondDate:(NSString *)secondDate {
+    NSDateComponents *components = [DateWrap componentsBetweenDates:firstDate
+                                                         secondDate:secondDate
+                                                              units:NSDayCalendarUnit];
+    if (components) {
         return abs([components day]);
     } else {
         // XXX invalid date
@@ -73,12 +62,63 @@ static NSString *const DATE_FORMAT = @"MM/dd/yyyy";
     }
 }
 
++ (NSInteger)weeksBetweenDates:(NSString *)firstDate
+                    secondDate:(NSString *)secondDate {
+    NSDateComponents *components = [DateWrap componentsBetweenDates:firstDate
+                                                         secondDate:secondDate
+                                                              units:NSWeekCalendarUnit];
+    if (components) {
+        return abs([components week]);
+    } else {
+        // XXX invalid date
+        return -1;
+    }
+}
+
++ (NSInteger)monthsBetweenDates:(NSString *)firstDate
+                     secondDate:(NSString *)secondDate {
+    NSDateComponents *components = [DateWrap componentsBetweenDates:firstDate
+                                                         secondDate:secondDate
+                                                              units:NSMonthCalendarUnit];
+    if (components) {
+        return abs([components month]);
+    } else {
+        // XXX invalid date
+        return -1;
+    }
+}
+
++ (NSDateComponents *)componentsBetweenDates:(NSString *)firstDate
+                                  secondDate:(NSString *)secondDate
+                                       units:(NSUInteger)unitFlags {
+    NSDateFormatter *dateFormat = [DateWrap getFormatter];
+    
+    NSCalendar *gregorian = [[NSCalendar alloc]
+                             initWithCalendarIdentifier:NSGregorianCalendar];
+    
+    NSDate *fromDate = [dateFormat dateFromString:firstDate];
+    NSDate *toDate = [dateFormat dateFromString:secondDate];
+    
+    if(fromDate != nil && toDate != nil) {
+        return [gregorian components:unitFlags
+                            fromDate:fromDate
+                              toDate:toDate
+                             options:0];
+    } else {
+        // XXX invalid date
+        return nil;
+    }
+}
+
 /**
- * Get a date formatter populated with the standard date format.
+ * Get a date formatter populated with the localized date format.
  */
 + (NSDateFormatter *)getFormatter {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:DATE_FORMAT];
+    formatter.dateFormat =
+    [NSDateFormatter dateFormatFromTemplate:DATE_TEMPLATE
+                                    options:0
+                                     locale:[NSLocale currentLocale]];
     return formatter;
 }
 

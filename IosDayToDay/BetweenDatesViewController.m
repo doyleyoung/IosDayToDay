@@ -20,168 +20,190 @@
 #import "BetweenDatesViewController.h"
 #import "DateWrap.h"
 
-@interface BetweenDatesViewController()
-@property (nonatomic) Boolean firstSelected;
-- (void)betweenDates;
-- (void)fadeInResetButton;
-- (void)fadeOutResetButton;
+
+#pragma mark - Private Interface
+
+@interface BetweenDatesViewController() <UITextFieldDelegate>
+@property (nonatomic, weak) IBOutlet UITextField *beginDateField;
+@property (nonatomic, weak) IBOutlet UIButton *beginDateSelectButton;
+@property (nonatomic, weak) IBOutlet UIView *beginDateFieldBorder;
+@property (nonatomic, weak) IBOutlet UIDatePicker *beginDatePicker;
+@property (nonatomic, weak) IBOutlet UIView *endDateAndAnswerView;
+@property (nonatomic, weak) IBOutlet UITextField *endDateField;
+@property (nonatomic, weak) IBOutlet UIButton *endDateSelectButton;
+@property (nonatomic, weak) IBOutlet UIView *endDateFieldBorder;
+@property (nonatomic, weak) IBOutlet UIDatePicker *endDatePicker;
+@property (nonatomic, weak) IBOutlet UIView *answerView;
+@property (nonatomic, weak) IBOutlet UILabel *answerLabel;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *unitControl;
+@property (nonatomic) BOOL beginDatePickerVisible;
+@property (nonatomic) BOOL endDatePickerVisible;
 @end
 
+
+#pragma mark - Implementation
+
 @implementation BetweenDatesViewController
-@synthesize firstDateText = _firstDateText;
-@synthesize secondDateText = _secondDateText;
-@synthesize answerInSwitch = _answerInSwitch;
-@synthesize answerText = _answerText;
-@synthesize resetButton = _resetButton;
-@synthesize dateChooserVisible = _dateChooserVisible;
-@synthesize firstSelected = _firstSelected;
-@synthesize popover = _popover;
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
+static CGFloat const ANIMATION_DURATION = 0.3f;
+static CGFloat const SELECT_BUTTON_MARGIN = 12.0f;
 
-#pragma mark - View lifecycle
 
-- (void)viewDidLoad
-{
+#pragma mark - View Lifecycle
+
+- (void)viewDidLoad {
     [super viewDidLoad];
-    [_firstDateText addTarget:self action:@selector(textFieldFinished:) forControlEvents:UIControlEventEditingDidEndOnExit];
-    [_secondDateText addTarget:self action:@selector(textFieldFinished:) forControlEvents:UIControlEventEditingDidEndOnExit];
-    [_firstDateText addTarget:self action:@selector(checkTextField:) forControlEvents:UIControlEventEditingChanged];
-    [_secondDateText addTarget:self action:@selector(checkTextField:) forControlEvents:UIControlEventEditingChanged];
-    [_answerInSwitch addTarget:self action:@selector(answerInSelected:) forControlEvents:UIControlEventValueChanged];
-    _resetButton.hidden = YES;
+    self.beginDateField.placeholder = [[DateWrap getFormatter].dateFormat lowercaseString];
+    self.endDateField.placeholder = [[DateWrap getFormatter].dateFormat lowercaseString];
 }
 
-- (void)viewDidUnload
-{
-    [self setFirstDateText:nil];
-    [self setSecondDateText:nil];
-    [self setAnswerInSwitch:nil];
-    [self setResetButton:nil];
-    [self setAnswerText:nil];
-    [super viewDidUnload];
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self showBeginDatePicker:NO];
+    [self showEndDatePicker:NO];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
-        return YES;
-    }
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)orientation
+                                duration:(NSTimeInterval)duration {
+    [self showBeginDatePicker:NO];
+    [self showEndDatePicker:NO];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([segue.identifier isEqualToString:@"pop_seg2"] ||
-       [segue.identifier isEqualToString:@"pop_seg3"]) {
-        _popover = [(UIStoryboardPopoverSegue *)segue popoverController];
+
+#pragma mark - UITextFieldDelegate Methods
+
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    if (textField == self.beginDateField) {
+        [self.beginDateField resignFirstResponder];
+        [self showBeginDatePicker:YES];
+        [self showEndDatePicker:NO];
+    } else if (textField == self.endDateField) {
+        [self.endDateField resignFirstResponder];
+        [self showBeginDatePicker:NO];
+        [self showEndDatePicker:YES];
     }
     
-    ((DateChooserViewController*)segue.destinationViewController).delegate = self;
+    return NO;
 }
 
-#pragma mark - Actions
 
-- (IBAction)firstDatePickPressed:(id)sender
-{
-    _firstSelected = YES;
-}
+#pragma mark - IBAction Methods
 
-- (IBAction)secondDatePickPressed:(id)sender
-{
-    _firstSelected = NO;
-}
-
-- (IBAction)resetPressed:(id)sender {
-    [_firstDateText setText:@""];
-    [_secondDateText setText:@""];
-    [_answerInSwitch setSelectedSegmentIndex:0];
-    [_answerText setText:@""];
-    [self.view endEditing:TRUE];
-    [self fadeOutResetButton];
-}
-
-#pragma mark - Delegate methods
-
--(void)setDate:(NSDate *)date {
-    if (_popover) {
-        [_popover dismissPopoverAnimated:YES];
+- (IBAction)dateSelected:(UIButton *)sender {
+    if (sender == self.beginDateSelectButton) {
+        self.beginDateField.text = [[DateWrap getFormatter]
+                                    stringFromDate:self.beginDatePicker.date];
+        [self showBeginDatePicker:NO];
+    } else if (sender == self.endDateSelectButton) {
+        self.endDateField.text = [[DateWrap getFormatter]
+                                  stringFromDate:self.endDatePicker.date];
+        [self showEndDatePicker:NO];
     }
     
-    NSDateFormatter *formatter = [DateWrap getFormatter];
-    if(_firstSelected) {
-        [_firstDateText setText:[formatter stringFromDate:date]];
-    } else {
-        [_secondDateText setText:[formatter stringFromDate:date]];
+    [self calculateTimeBetween];
+}
+
+- (IBAction)dateChanged:(UIDatePicker *)sender {
+    if (sender == self.beginDatePicker) {
+        self.beginDateField.text = [[DateWrap getFormatter] stringFromDate:sender.date];
+    } else if (sender == self.endDatePicker) {
+        self.endDateField.text = [[DateWrap getFormatter] stringFromDate:sender.date];
     }
-    [self betweenDates];
+    
+    [self calculateTimeBetween];
 }
 
-- (void)dateCancelled {
-    if (_popover) {
-        [_popover dismissPopoverAnimated:YES];
-    }
+- (IBAction)unitChanged:(UISegmentedControl *)sender {
+    [self calculateTimeBetween];
 }
 
-#pragma mark - Text field interaction
 
-- (void)checkTextField:(id)sender {
-    UITextField *textField = (UITextField *)sender;
-    if ([textField.text length] > 0) {
-        [self betweenDates];
-    }
-}
+#pragma mark - Private Methods
 
-- (void)answerInSelected:(id)sender {
-    [self betweenDates];
-}
-
-- (IBAction)textFieldFinished:(id)sender {
-    [sender resignFirstResponder];
-}
-
-#pragma mark - Private helpers
-
-- (void)betweenDates {
-    if (([_firstDateText text] != nil && ![@"" isEqualToString:[_firstDateText text]]) &&
-        ([_secondDateText text] != nil && ![@"" isEqualToString:[_secondDateText text]])) {
-        NSInteger numDays = [DateWrap daysBetweenDates:[_firstDateText text] secondDate:[_secondDateText text]];
-        
-        if([_answerInSwitch selectedSegmentIndex] == 0) {
-            [_answerText setText:[NSString stringWithFormat:@"%d", numDays]];
-        } else {
-            [_answerText setText:[NSString stringWithFormat:@"%d", ((int)numDays / 7)]];
+- (void)calculateTimeBetween {
+    if (![self.beginDateField.text isEqualToString:@""]
+        && ![self.endDateField.text isEqualToString:@""]) {
+        NSString *begin = self.beginDateField.text;
+        NSString *end = self.endDateField.text;
+        NSInteger units = 0;
+        if (self.unitControl.selectedSegmentIndex == 0) {
+            units = [DateWrap daysBetweenDates:begin secondDate:end];
+        } else if (self.unitControl.selectedSegmentIndex == 1) {
+            units = [DateWrap weeksBetweenDates:begin secondDate:end];
+        } else if (self.unitControl.selectedSegmentIndex == 2) {
+            units = [DateWrap monthsBetweenDates:begin secondDate:end];
         }
-
-        [self.view endEditing:TRUE];
-        [self fadeInResetButton];
+        
+        self.answerLabel.text = [NSString stringWithFormat:@"%d", units];
+        self.unitControl.hidden = NO;
+    } else {
+        self.answerLabel.text = @"";
     }
 }
 
-- (void)fadeInResetButton {
-    if(_resetButton.hidden == YES) {
-        CATransition *animation = [CATransition animation];
-        animation.type = kCATransitionFade;
-        animation.duration = 0.4;
-        [_resetButton.layer addAnimation:animation forKey:nil];
+- (void)showBeginDatePicker:(BOOL)show {
+    if (self.beginDatePickerVisible != show) {
+        self.beginDatePickerVisible = show;
+        self.beginDateSelectButton.userInteractionEnabled = show;
         
-        _resetButton.hidden = NO;
+        id animations = ^{
+            CGFloat modifier = show ? 1.0f : -1.0f;
+            CGRect frame = self.endDateAndAnswerView.frame;
+            frame.origin.y += self.beginDatePicker.frame.size.height * modifier;
+            self.endDateAndAnswerView.frame = frame;
+            
+            CGFloat delta = self.beginDateSelectButton.frame.size.width + SELECT_BUTTON_MARGIN;
+            
+            modifier = show ? -1.0f : 1.0f;
+            frame = self.beginDateField.frame;
+            frame.size.width += delta * modifier;
+            self.beginDateField.frame = frame;
+            
+            frame = self.beginDateFieldBorder.frame;
+            frame.size.width += delta * modifier;
+            self.beginDateFieldBorder.frame = frame;
+            
+            self.beginDateSelectButton.alpha = show ? 1.0f : 0.0f;
+        };
+        
+        [UIView animateWithDuration:ANIMATION_DURATION
+                              delay:0.0f
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:animations
+                         completion:NULL];
     }
 }
 
-- (void)fadeOutResetButton {
-    if(_resetButton.hidden == NO) {
-        CATransition *animation = [CATransition animation];
-        animation.type = kCATransitionFade;
-        animation.duration = 0.8;
-        [_resetButton.layer addAnimation:animation forKey:nil];
+- (void)showEndDatePicker:(BOOL)show {
+    if (self.endDatePickerVisible != show) {
+        self.endDatePickerVisible = show;
+        self.endDateSelectButton.userInteractionEnabled = show;
         
-        _resetButton.hidden = YES;
+        id animations = ^{
+            CGFloat modifier = show ? 1.0f : -1.0f;
+            CGRect frame = self.answerView.frame;
+            frame.origin.y += self.endDatePicker.frame.size.height * modifier;
+            self.answerView.frame = frame;
+            
+            CGFloat delta = self.endDateSelectButton.frame.size.width + SELECT_BUTTON_MARGIN;
+            
+            modifier = show ? -1.0f : 1.0f;
+            frame = self.endDateField.frame;
+            frame.size.width += delta * modifier;
+            self.endDateField.frame = frame;
+            
+            frame = self.endDateFieldBorder.frame;
+            frame.size.width += delta * modifier;
+            self.endDateFieldBorder.frame = frame;
+            
+            self.endDateSelectButton.alpha = show ? 1.0f : 0.0f;
+        };
+        
+        [UIView animateWithDuration:ANIMATION_DURATION
+                              delay:0.0f
+                            options:UIViewAnimationOptionCurveEaseOut
+                         animations:animations
+                         completion:NULL];
     }
 }
 

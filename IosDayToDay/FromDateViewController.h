@@ -18,25 +18,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
-#import "DateChooserViewController.h"
 
 @interface FromDateViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UITextField *numDaysText;
-@property (weak, nonatomic) IBOutlet UITextField *fromDateText;
-@property (weak, nonatomic) IBOutlet UILabel *answerText;
-@property (weak, nonatomic) IBOutlet UIButton *resetButton;
-@property (nonatomic) Boolean dateChooserVisible;
-@property (weak, nonatomic) UIPopoverController *popover;
-
-- (IBAction)textFieldFinished:(id)sender;
-- (IBAction)resetPressed:(id)sender;
-
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
-- (void)checkTextField:(id)sender;
-
-- (void)setDate:(NSDate *)date;
-- (void)dateCancelled;
 
 @end

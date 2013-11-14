@@ -7,34 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CA18904316471CB400C40B6C /* DateChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA18904216471CB400C40B6C /* DateChooserViewController.m */; };
-		CA1890491647574100C40B6C /* DateChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA18904216471CB400C40B6C /* DateChooserViewController.m */; };
 		CA5F340A1696837C0053FBD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5F34091696837C0053FBD2 /* QuartzCore.framework */; };
-		CA5F57E0168B2B33003E40F2 /* DayToDayIOS114.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5F57DF168B2B33003E40F2 /* DayToDayIOS114.png */; };
-		CA5F57E3168B2B74003E40F2 /* DayToDayIOS57.png in Resources */ = {isa = PBXBuildFile; fileRef = CA5F57E2168B2B74003E40F2 /* DayToDayIOS57.png */; };
-		CA9D13CA16AF7B910012F918 /* between_dates_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9D13C916AF7B910012F918 /* between_dates_32x32.png */; };
-		CA9D13D616AF89BF0012F918 /* between_dates_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9D13C916AF7B910012F918 /* between_dates_32x32.png */; };
-		CA9D13DA16AF8E330012F918 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA6B092A1651F58300408B4C /* Default-568h@2x.png */; };
-		CA9D13DC16AF8FD50012F918 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9D13DB16AF8FD50012F918 /* Default@2x.png */; };
-		CA9D13DD16AF8FE30012F918 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9D13DB16AF8FD50012F918 /* Default@2x.png */; };
-		CA9D13E116AF911C0012F918 /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9D13E016AF911C0012F918 /* Default-Portrait@2x~ipad.png */; };
-		CA9D13E316AF92220012F918 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9D13E216AF92220012F918 /* Default-Landscape@2x~ipad.png */; };
-		CA9D13E416AF92340012F918 /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9D13E216AF92220012F918 /* Default-Landscape@2x~ipad.png */; };
-		CA9D13E616B0CA420012F918 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9D13E516B0CA420012F918 /* Default.png */; };
-		CA9D13E716B0CA520012F918 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9D13E516B0CA420012F918 /* Default.png */; };
-		CA9D13EB16B0CB080012F918 /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9D13EA16B0CB080012F918 /* Default-Portrait~ipad.png */; };
-		CA9D13ED16B0CBCC0012F918 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9D13EC16B0CBCC0012F918 /* Default-Landscape~ipad.png */; };
-		CA9D13EE16B0CC070012F918 /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9D13EC16B0CBCC0012F918 /* Default-Landscape~ipad.png */; };
-		CA9D8069168BF00C00B97C2A /* DayToDayIOS72.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9D8068168BF00C00B97C2A /* DayToDayIOS72.png */; };
-		CA9D806B168BF01000B97C2A /* DayToDayIOS144.png in Resources */ = {isa = PBXBuildFile; fileRef = CA9D806A168BF01000B97C2A /* DayToDayIOS144.png */; };
 		CAA506D615563224001F2508 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D515563224001F2508 /* UIKit.framework */; };
 		CAA506D815563224001F2508 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D715563224001F2508 /* Foundation.framework */; };
 		CAA506DA15563224001F2508 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D915563224001F2508 /* CoreGraphics.framework */; };
 		CAA506E015563224001F2508 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAA506DE15563224001F2508 /* InfoPlist.strings */; };
 		CAA506E215563224001F2508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506E115563224001F2508 /* main.m */; };
 		CAA506E615563224001F2508 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506E515563224001F2508 /* AppDelegate.m */; };
-		CAA506E915563224001F2508 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA506E715563224001F2508 /* MainStoryboard_iPhone.storyboard */; };
-		CAA506EC15563224001F2508 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAA506EA15563224001F2508 /* MainStoryboard_iPad.storyboard */; };
 		CAA506EF15563224001F2508 /* FromDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506EE15563224001F2508 /* FromDateViewController.m */; };
 		CAA506F615563224001F2508 /* BetweenDatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506F515563224001F2508 /* BetweenDatesViewController.m */; };
 		CAA5070215563224001F2508 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA5070115563224001F2508 /* SenTestingKit.framework */; };
@@ -42,8 +21,10 @@
 		CAA5070415563224001F2508 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D715563224001F2508 /* Foundation.framework */; };
 		CAA5070C15563224001F2508 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAA5070A15563224001F2508 /* InfoPlist.strings */; };
 		CAA5070F15563224001F2508 /* IosDayToDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA5070E15563224001F2508 /* IosDayToDayTests.m */; };
-		CAA5072015594E31001F2508 /* calendar_32x32.png in Resources */ = {isa = PBXBuildFile; fileRef = CAA5071F15594E31001F2508 /* calendar_32x32.png */; };
 		CAE583D1155A10FA00D9BC3A /* DateWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE583D0155A10FA00D9BC3A /* DateWrap.m */; };
+		F357D7701803AED6009176A7 /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F357D76F1803AED6009176A7 /* iPad.storyboard */; };
+		F3600BF817FF9F8A0064DE2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3600BF717FF9F8A0064DE2F /* Images.xcassets */; };
+		F3600BFC17FFA52E0064DE2F /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3600BFB17FFA52E0064DE2F /* iPhone.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,21 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CA18904116471CB400C40B6C /* DateChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateChooserViewController.h; sourceTree = "<group>"; };
-		CA18904216471CB400C40B6C /* DateChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateChooserViewController.m; sourceTree = "<group>"; };
 		CA5F34091696837C0053FBD2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		CA5F57DF168B2B33003E40F2 /* DayToDayIOS114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DayToDayIOS114.png; sourceTree = "<group>"; };
-		CA5F57E2168B2B74003E40F2 /* DayToDayIOS57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DayToDayIOS57.png; sourceTree = "<group>"; };
-		CA6B092A1651F58300408B4C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		CA9D13C916AF7B910012F918 /* between_dates_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = between_dates_32x32.png; path = IosDayToDay/between_dates_32x32.png; sourceTree = "<group>"; };
-		CA9D13DB16AF8FD50012F918 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		CA9D13E016AF911C0012F918 /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
-		CA9D13E216AF92220012F918 /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
-		CA9D13E516B0CA420012F918 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		CA9D13EA16B0CB080012F918 /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
-		CA9D13EC16B0CBCC0012F918 /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
-		CA9D8068168BF00C00B97C2A /* DayToDayIOS72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DayToDayIOS72.png; sourceTree = "<group>"; };
-		CA9D806A168BF01000B97C2A /* DayToDayIOS144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DayToDayIOS144.png; sourceTree = "<group>"; };
 		CAA506D115563224001F2508 /* DayToDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayToDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA506D515563224001F2508 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CAA506D715563224001F2508 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -82,8 +49,6 @@
 		CAA506E315563224001F2508 /* IosDayToDay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IosDayToDay-Prefix.pch"; sourceTree = "<group>"; };
 		CAA506E415563224001F2508 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CAA506E515563224001F2508 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CAA506E815563224001F2508 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		CAA506EB15563224001F2508 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		CAA506ED15563224001F2508 /* FromDateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FromDateViewController.h; sourceTree = "<group>"; };
 		CAA506EE15563224001F2508 /* FromDateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FromDateViewController.m; sourceTree = "<group>"; };
 		CAA506F415563224001F2508 /* BetweenDatesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BetweenDatesViewController.h; sourceTree = "<group>"; };
@@ -94,9 +59,11 @@
 		CAA5070B15563224001F2508 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CAA5070D15563224001F2508 /* IosDayToDayTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IosDayToDayTests.h; sourceTree = "<group>"; };
 		CAA5070E15563224001F2508 /* IosDayToDayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IosDayToDayTests.m; sourceTree = "<group>"; };
-		CAA5071F15594E31001F2508 /* calendar_32x32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar_32x32.png; path = IosDayToDay/calendar_32x32.png; sourceTree = "<group>"; };
 		CAE583CF155A10FA00D9BC3A /* DateWrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateWrap.h; sourceTree = "<group>"; };
 		CAE583D0155A10FA00D9BC3A /* DateWrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateWrap.m; sourceTree = "<group>"; };
+		F357D76F1803AED6009176A7 /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPad.storyboard; sourceTree = "<group>"; };
+		F3600BF717FF9F8A0064DE2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F3600BFB17FFA52E0064DE2F /* iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,30 +91,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CA9D806C168BF19000B97C2A /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				CA9D13C916AF7B910012F918 /* between_dates_32x32.png */,
-				CAA5071F15594E31001F2508 /* calendar_32x32.png */,
-				CA9D806A168BF01000B97C2A /* DayToDayIOS144.png */,
-				CA9D8068168BF00C00B97C2A /* DayToDayIOS72.png */,
-				CA5F57E2168B2B74003E40F2 /* DayToDayIOS57.png */,
-				CA5F57DF168B2B33003E40F2 /* DayToDayIOS114.png */,
-				CA9D13E516B0CA420012F918 /* Default.png */,
-				CA9D13DB16AF8FD50012F918 /* Default@2x.png */,
-				CA6B092A1651F58300408B4C /* Default-568h@2x.png */,
-				CA9D13EA16B0CB080012F918 /* Default-Portrait~ipad.png */,
-				CA9D13E016AF911C0012F918 /* Default-Portrait@2x~ipad.png */,
-				CA9D13EC16B0CBCC0012F918 /* Default-Landscape~ipad.png */,
-				CA9D13E216AF92220012F918 /* Default-Landscape@2x~ipad.png */,
-			);
-			name = Images;
-			sourceTree = "<group>";
-		};
 		CAA506C615563223001F2508 = {
 			isa = PBXGroup;
 			children = (
-				CA9D806C168BF19000B97C2A /* Images */,
 				CAA506DB15563224001F2508 /* IosDayToDay */,
 				CAA5070715563224001F2508 /* IosDayToDayTests */,
 				CAA506D415563224001F2508 /* Frameworks */,
@@ -179,18 +125,12 @@
 		CAA506DB15563224001F2508 /* IosDayToDay */ = {
 			isa = PBXGroup;
 			children = (
+				F3600BFA17FFA15D0064DE2F /* Date Math */,
+				F3600BF917FFA1330064DE2F /* Controllers */,
+				F357D7711803BC10009176A7 /* Storyboards */,
 				CAA506E415563224001F2508 /* AppDelegate.h */,
 				CAA506E515563224001F2508 /* AppDelegate.m */,
-				CAA506E715563224001F2508 /* MainStoryboard_iPhone.storyboard */,
-				CAA506EA15563224001F2508 /* MainStoryboard_iPad.storyboard */,
-				CAA506ED15563224001F2508 /* FromDateViewController.h */,
-				CAA506EE15563224001F2508 /* FromDateViewController.m */,
-				CAA506F415563224001F2508 /* BetweenDatesViewController.h */,
-				CAA506F515563224001F2508 /* BetweenDatesViewController.m */,
-				CA18904116471CB400C40B6C /* DateChooserViewController.h */,
-				CA18904216471CB400C40B6C /* DateChooserViewController.m */,
-				CAE583CF155A10FA00D9BC3A /* DateWrap.h */,
-				CAE583D0155A10FA00D9BC3A /* DateWrap.m */,
+				F3600BF717FF9F8A0064DE2F /* Images.xcassets */,
 				CAA506DC15563224001F2508 /* Supporting Files */,
 			);
 			path = IosDayToDay;
@@ -224,6 +164,35 @@
 				CAA5070A15563224001F2508 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F357D7711803BC10009176A7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F3600BFB17FFA52E0064DE2F /* iPhone.storyboard */,
+				F357D76F1803AED6009176A7 /* iPad.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		F3600BF917FFA1330064DE2F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CAA506ED15563224001F2508 /* FromDateViewController.h */,
+				CAA506EE15563224001F2508 /* FromDateViewController.m */,
+				CAA506F415563224001F2508 /* BetweenDatesViewController.h */,
+				CAA506F515563224001F2508 /* BetweenDatesViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		F3600BFA17FFA15D0064DE2F /* Date Math */ = {
+			isa = PBXGroup;
+			children = (
+				CAE583CF155A10FA00D9BC3A /* DateWrap.h */,
+				CAE583D0155A10FA00D9BC3A /* DateWrap.m */,
+			);
+			name = "Date Math";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,7 +240,7 @@
 		CAA506C815563223001F2508 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = CAA506CB15563223001F2508 /* Build configuration list for PBXProject "IosDayToDay" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -297,21 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAA506E015563224001F2508 /* InfoPlist.strings in Resources */,
-				CAA506E915563224001F2508 /* MainStoryboard_iPhone.storyboard in Resources */,
-				CA9D13D616AF89BF0012F918 /* between_dates_32x32.png in Resources */,
-				CA9D13DA16AF8E330012F918 /* Default-568h@2x.png in Resources */,
-				CAA506EC15563224001F2508 /* MainStoryboard_iPad.storyboard in Resources */,
-				CA9D13E716B0CA520012F918 /* Default.png in Resources */,
-				CAA5072015594E31001F2508 /* calendar_32x32.png in Resources */,
-				CA5F57E0168B2B33003E40F2 /* DayToDayIOS114.png in Resources */,
-				CA5F57E3168B2B74003E40F2 /* DayToDayIOS57.png in Resources */,
-				CA9D8069168BF00C00B97C2A /* DayToDayIOS72.png in Resources */,
-				CA9D806B168BF01000B97C2A /* DayToDayIOS144.png in Resources */,
-				CA9D13DD16AF8FE30012F918 /* Default@2x.png in Resources */,
-				CA9D13E116AF911C0012F918 /* Default-Portrait@2x~ipad.png in Resources */,
-				CA9D13E416AF92340012F918 /* Default-Landscape@2x~ipad.png in Resources */,
-				CA9D13EB16B0CB080012F918 /* Default-Portrait~ipad.png in Resources */,
-				CA9D13EE16B0CC070012F918 /* Default-Landscape~ipad.png in Resources */,
+				F3600BFC17FFA52E0064DE2F /* iPhone.storyboard in Resources */,
+				F357D7701803AED6009176A7 /* iPad.storyboard in Resources */,
+				F3600BF817FF9F8A0064DE2F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,11 +277,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAA5070C15563224001F2508 /* InfoPlist.strings in Resources */,
-				CA9D13CA16AF7B910012F918 /* between_dates_32x32.png in Resources */,
-				CA9D13DC16AF8FD50012F918 /* Default@2x.png in Resources */,
-				CA9D13E316AF92220012F918 /* Default-Landscape@2x~ipad.png in Resources */,
-				CA9D13E616B0CA420012F918 /* Default.png in Resources */,
-				CA9D13ED16B0CBCC0012F918 /* Default-Landscape~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,7 +308,6 @@
 				CAA506EF15563224001F2508 /* FromDateViewController.m in Sources */,
 				CAA506F615563224001F2508 /* BetweenDatesViewController.m in Sources */,
 				CAE583D1155A10FA00D9BC3A /* DateWrap.m in Sources */,
-				CA1890491647574100C40B6C /* DateChooserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +316,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAA5070F15563224001F2508 /* IosDayToDayTests.m in Sources */,
-				CA18904316471CB400C40B6C /* DateChooserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,22 +338,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		CAA506E715563224001F2508 /* MainStoryboard_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAA506E815563224001F2508 /* en */,
-			);
-			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		CAA506EA15563224001F2508 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAA506EB15563224001F2508 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		CAA5070A15563224001F2508 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -419,9 +353,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -436,11 +371,15 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -450,9 +389,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -461,11 +401,14 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "865B6EA9-6A3B-4E75-A123-F6E9BC50DAD9";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "865B6EA9-6A3B-4E75-A123-F6E9BC50DAD9";
@@ -478,9 +421,13 @@
 		CAA5071315563224001F2508 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IosDayToDay/IosDayToDay-Prefix.pch";
 				INFOPLIST_FILE = "IosDayToDay/IosDayToDay-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = DayToDay;
 				WRAPPER_EXTENSION = app;
 			};
@@ -489,11 +436,14 @@
 		CAA5071415563224001F2508 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Doyle Young (J36RH3D35W)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Doyle Young (J36RH3D35W)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IosDayToDay/IosDayToDay-Prefix.pch";
 				INFOPLIST_FILE = "IosDayToDay/IosDayToDay-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = DayToDay;
 				PROVISIONING_PROFILE = "865B6EA9-6A3B-4E75-A123-F6E9BC50DAD9";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "865B6EA9-6A3B-4E75-A123-F6E9BC50DAD9";
