@@ -241,6 +241,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					CAA506D015563224001F2508 = {
+						DevelopmentTeam = XMFN7464E4;
+					};
+				};
 			};
 			buildConfigurationList = CAA506CB15563223001F2508 /* Build configuration list for PBXProject "IosDayToDay" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -424,11 +429,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IosDayToDay/IosDayToDay-Prefix.pch";
 				INFOPLIST_FILE = "IosDayToDay/IosDayToDay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = DayToDay;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -439,13 +446,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Doyle Young (J36RH3D35W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IosDayToDay/IosDayToDay-Prefix.pch";
 				INFOPLIST_FILE = "IosDayToDay/IosDayToDay-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = DayToDay;
-				PROVISIONING_PROFILE = "865B6EA9-6A3B-4E75-A123-F6E9BC50DAD9";
+				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "865B6EA9-6A3B-4E75-A123-F6E9BC50DAD9";
 				WRAPPER_EXTENSION = app;
 			};

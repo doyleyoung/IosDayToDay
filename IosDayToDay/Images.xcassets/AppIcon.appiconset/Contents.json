@@ -3,19 +3,19 @@
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "settings-1.png",
+      "filename" : "IosDayToDayIcon-9.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "settings@2x.png",
+      "filename" : "IosDayToDayIcon-6.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "spotlight@2x.png",
+      "filename" : "IosDayToDayIcon-3.png",
       "scale" : "2x"
     },
     {
@@ -31,31 +31,31 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "icon_iphone@2x.png",
+      "filename" : "IosDayToDayIcon-2.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "settings.png",
+      "filename" : "IosDayToDayIcon-8.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "settings@2x-1.png",
+      "filename" : "IosDayToDayIcon-5.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "spotlight.png",
+      "filename" : "IosDayToDayIcon 40.png",
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "spotlight@2x-1.png",
+      "filename" : "IosDayToDayIcon-4.png",
       "scale" : "2x"
     },
     {
@@ -81,13 +81,13 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "icon_ipad.png",
+      "filename" : "IosDayToDayIcon-1.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "icon_ipad@2x.png",
+      "filename" : "IosDayToDayIcon.png",
       "scale" : "2x"
     }
   ],
