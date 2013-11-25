@@ -3,7 +3,7 @@ iOS DayToDay
 
 An iOS date math app that allows you to easily:
 * Add and subtract days from a date
-* Determine number of days or weeks between dates
+* Determine number of days, weeks or months between dates
 
 Overview
 --------
@@ -22,6 +22,7 @@ questions, please let me know.
 Developed by
 ============
 * Doyle Young - dyoung@gmail.com
+* [Matt Jones](https://github.com/mrketchup) - iOS 7 update 
 
 License
 =======
