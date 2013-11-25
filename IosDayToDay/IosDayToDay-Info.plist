@@ -9,12 +9,7 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFiles</key>
-	<array>
-		<string>DayToDayIOS114.png</string>
-		<string>DayToDayIOS57.png</string>
-		<string>DayToDayIOS72.png</string>
-		<string>DayToDayIOS144.png</string>
-	</array>
+	<array/>
 	<key>CFBundleIcons</key>
 	<dict/>
 	<key>CFBundleIcons~ipad</key>
