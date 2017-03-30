@@ -86,7 +86,9 @@ static CGFloat const SELECT_BUTTON_MARGIN = 12.0f;
 }
 
 - (IBAction)dateChanged:(UIDatePicker *)sender {
+    BOOL hidden = [sender isHidden];
     self.fromDateField.text = [[DateWrap getFormatter] stringFromDate:sender.date];
+    hidden = [sender isHidden];
     [self calculateDate];
 }
 

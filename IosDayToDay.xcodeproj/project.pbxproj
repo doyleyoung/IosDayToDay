@@ -16,7 +16,6 @@
 		CAA506E615563224001F2508 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506E515563224001F2508 /* AppDelegate.m */; };
 		CAA506EF15563224001F2508 /* FromDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506EE15563224001F2508 /* FromDateViewController.m */; };
 		CAA506F615563224001F2508 /* BetweenDatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506F515563224001F2508 /* BetweenDatesViewController.m */; };
-		CAA5070215563224001F2508 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA5070115563224001F2508 /* SenTestingKit.framework */; };
 		CAA5070315563224001F2508 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D515563224001F2508 /* UIKit.framework */; };
 		CAA5070415563224001F2508 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D715563224001F2508 /* Foundation.framework */; };
 		CAA5070C15563224001F2508 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAA5070A15563224001F2508 /* InfoPlist.strings */; };
@@ -53,8 +52,7 @@
 		CAA506EE15563224001F2508 /* FromDateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FromDateViewController.m; sourceTree = "<group>"; };
 		CAA506F415563224001F2508 /* BetweenDatesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BetweenDatesViewController.h; sourceTree = "<group>"; };
 		CAA506F515563224001F2508 /* BetweenDatesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BetweenDatesViewController.m; sourceTree = "<group>"; };
-		CAA5070015563224001F2508 /* IosDayToDayTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IosDayToDayTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAA5070115563224001F2508 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		CAA5070015563224001F2508 /* IosDayToDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IosDayToDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA5070915563224001F2508 /* IosDayToDayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IosDayToDayTests-Info.plist"; sourceTree = "<group>"; };
 		CAA5070B15563224001F2508 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CAA5070D15563224001F2508 /* IosDayToDayTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IosDayToDayTests.h; sourceTree = "<group>"; };
@@ -82,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAA5070215563224001F2508 /* SenTestingKit.framework in Frameworks */,
 				CAA5070315563224001F2508 /* UIKit.framework in Frameworks */,
 				CAA5070415563224001F2508 /* Foundation.framework in Frameworks */,
 			);
@@ -105,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				CAA506D115563224001F2508 /* DayToDay.app */,
-				CAA5070015563224001F2508 /* IosDayToDayTests.octest */,
+				CAA5070015563224001F2508 /* IosDayToDayTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,7 +114,6 @@
 				CAA506D515563224001F2508 /* UIKit.framework */,
 				CAA506D715563224001F2508 /* Foundation.framework */,
 				CAA506D915563224001F2508 /* CoreGraphics.framework */,
-				CAA5070115563224001F2508 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -231,8 +227,8 @@
 			);
 			name = IosDayToDayTests;
 			productName = IosDayToDayTests;
-			productReference = CAA5070015563224001F2508 /* IosDayToDayTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = CAA5070015563224001F2508 /* IosDayToDayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -240,7 +236,8 @@
 		CAA506C815563223001F2508 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastTestingUpgradeCheck = 0610;
+				LastUpgradeCheck = 0610;
 				TargetAttributes = {
 					CAA506D015563224001F2508 = {
 						DevelopmentTeam = XMFN7464E4;
@@ -364,9 +361,11 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -383,7 +382,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -400,10 +399,12 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Doyle Young (J36RH3D35W)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Doyle Young (J36RH3D35W)";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -413,10 +414,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "865B6EA9-6A3B-4E75-A123-F6E9BC50DAD9";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "865B6EA9-6A3B-4E75-A123-F6E9BC50DAD9";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -433,7 +434,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IosDayToDay/IosDayToDay-Prefix.pch";
 				INFOPLIST_FILE = "IosDayToDay/IosDayToDay-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = DayToDay;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -450,10 +451,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IosDayToDay/IosDayToDay-Prefix.pch";
 				INFOPLIST_FILE = "IosDayToDay/IosDayToDay-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				PRODUCT_NAME = DayToDay;
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "EE18CADC-1B1C-40FC-BB03-AC373DFA0872";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -464,14 +465,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IosDayToDay.app/IosDayToDay";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IosDayToDay/IosDayToDay-Prefix.pch";
 				INFOPLIST_FILE = "IosDayToDayTests/IosDayToDayTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -481,14 +481,13 @@
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IosDayToDay.app/IosDayToDay";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IosDayToDay/IosDayToDay-Prefix.pch";
 				INFOPLIST_FILE = "IosDayToDayTests/IosDayToDayTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

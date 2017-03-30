@@ -134,7 +134,7 @@ static CGFloat const SELECT_BUTTON_MARGIN = 12.0f;
             units = [DateWrap monthsBetweenDates:begin secondDate:end];
         }
         
-        self.answerLabel.text = [NSString stringWithFormat:@"%d", units];
+        self.answerLabel.text = [NSString stringWithFormat:@"%ld", (long)units];
         self.unitControl.hidden = NO;
     } else {
         self.answerLabel.text = @"";
