@@ -14,10 +14,8 @@
 		344E1F761E8DCC5100901524 /* DateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E1F751E8DCC5100901524 /* DateTextField.m */; };
 		344E1F791E8DDEBD00901524 /* TextFieldContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E1F781E8DDEBD00901524 /* TextFieldContainerView.m */; };
 		344E1F7C1E8DE2DB00901524 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E1F7B1E8DE2DB00901524 /* BaseViewController.m */; };
-		CA5F340A1696837C0053FBD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5F34091696837C0053FBD2 /* QuartzCore.framework */; };
-		CAA506D615563224001F2508 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D515563224001F2508 /* UIKit.framework */; };
-		CAA506D815563224001F2508 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D715563224001F2508 /* Foundation.framework */; };
-		CAA506DA15563224001F2508 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D915563224001F2508 /* CoreGraphics.framework */; };
+		344E1F7D1E8DEBD100901524 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D515563224001F2508 /* UIKit.framework */; };
+		344E1F801E8DEC1600901524 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D915563224001F2508 /* CoreGraphics.framework */; };
 		CAA506E015563224001F2508 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAA506DE15563224001F2508 /* InfoPlist.strings */; };
 		CAA506E215563224001F2508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506E115563224001F2508 /* main.m */; };
 		CAA506E615563224001F2508 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506E515563224001F2508 /* AppDelegate.m */; };
@@ -84,10 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA5F340A1696837C0053FBD2 /* QuartzCore.framework in Frameworks */,
-				CAA506D615563224001F2508 /* UIKit.framework in Frameworks */,
-				CAA506D815563224001F2508 /* Foundation.framework in Frameworks */,
-				CAA506DA15563224001F2508 /* CoreGraphics.framework in Frameworks */,
+				344E1F801E8DEC1600901524 /* CoreGraphics.framework in Frameworks */,
+				344E1F7D1E8DEBD100901524 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -459,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
