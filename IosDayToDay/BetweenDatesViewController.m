@@ -28,7 +28,6 @@
 @property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet DateTextField *beginDateField;
 @property (nonatomic, weak) IBOutlet DateTextField *endDateField;
-@property (nonatomic, weak) IBOutlet UIView *answerView;
 @property (nonatomic, weak) IBOutlet UILabel *answerLabel;
 @property (nonatomic, weak) IBOutlet UISegmentedControl *unitControl;
 @end

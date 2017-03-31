@@ -12,6 +12,7 @@
 		344E1F701E8DBEF200901524 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344E1F6F1E8DBEF200901524 /* Launch.storyboard */; };
 		344E1F731E8DCAD900901524 /* DaysTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E1F721E8DCAD900901524 /* DaysTextField.m */; };
 		344E1F761E8DCC5100901524 /* DateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E1F751E8DCC5100901524 /* DateTextField.m */; };
+		344E1F791E8DDEBD00901524 /* TextFieldContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E1F781E8DDEBD00901524 /* TextFieldContainerView.m */; };
 		CA5F340A1696837C0053FBD2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5F34091696837C0053FBD2 /* QuartzCore.framework */; };
 		CAA506D615563224001F2508 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D515563224001F2508 /* UIKit.framework */; };
 		CAA506D815563224001F2508 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D715563224001F2508 /* Foundation.framework */; };
@@ -48,6 +49,8 @@
 		344E1F721E8DCAD900901524 /* DaysTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaysTextField.m; sourceTree = "<group>"; };
 		344E1F741E8DCC5100901524 /* DateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTextField.h; sourceTree = "<group>"; };
 		344E1F751E8DCC5100901524 /* DateTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTextField.m; sourceTree = "<group>"; };
+		344E1F771E8DDEBD00901524 /* TextFieldContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldContainerView.h; sourceTree = "<group>"; };
+		344E1F781E8DDEBD00901524 /* TextFieldContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldContainerView.m; sourceTree = "<group>"; };
 		CA5F34091696837C0053FBD2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CAA506D115563224001F2508 /* DayToDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayToDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA506D515563224001F2508 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -106,6 +109,8 @@
 				344E1F721E8DCAD900901524 /* DaysTextField.m */,
 				344E1F741E8DCC5100901524 /* DateTextField.h */,
 				344E1F751E8DCC5100901524 /* DateTextField.m */,
+				344E1F771E8DDEBD00901524 /* TextFieldContainerView.h */,
+				344E1F781E8DDEBD00901524 /* TextFieldContainerView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 				CAA506E615563224001F2508 /* AppDelegate.m in Sources */,
 				CAA506EF15563224001F2508 /* FromDateViewController.m in Sources */,
 				344E1F731E8DCAD900901524 /* DaysTextField.m in Sources */,
+				344E1F791E8DDEBD00901524 /* TextFieldContainerView.m in Sources */,
 				CAA506F615563224001F2508 /* BetweenDatesViewController.m in Sources */,
 				CAE583D1155A10FA00D9BC3A /* DateWrap.m in Sources */,
 			);

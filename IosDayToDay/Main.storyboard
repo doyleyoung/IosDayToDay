@@ -27,7 +27,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Nc-vG-F0V" userLabel="Sizing View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="264"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCJ-D0-P6j">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VCJ-D0-P6j" customClass="TextFieldContainerView">
                                                 <rect key="frame" x="0.0" y="20" width="375" height="75"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Days" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eu6-BF-Q4E">
@@ -49,7 +49,7 @@
                                                             <action selector="textFieldEditingChanged:" destination="utA-pc-hny" eventType="editingChanged" id="Wfe-R4-lny"/>
                                                         </connections>
                                                     </textField>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eId-1N-dv8" userLabel="Separator">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eId-1N-dv8">
                                                         <rect key="frame" x="20" y="65" width="335" height="1"/>
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -69,8 +69,12 @@
                                                     <constraint firstItem="YfZ-8B-56R" firstAttribute="top" secondItem="Eu6-BF-Q4E" secondAttribute="bottom" id="X9w-Ur-5Vy"/>
                                                     <constraint firstItem="eId-1N-dv8" firstAttribute="top" secondItem="YfZ-8B-56R" secondAttribute="bottom" id="sz6-p5-LC3"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="border" destination="eId-1N-dv8" id="eNc-bE-d3h"/>
+                                                    <outlet property="borderHeight" destination="mXu-Qq-vNe" id="nrg-DO-FNc"/>
+                                                </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5e-GJ-iny">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5e-GJ-iny" customClass="TextFieldContainerView">
                                                 <rect key="frame" x="0.0" y="115" width="375" height="75"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwR-1r-9BW">
@@ -92,7 +96,7 @@
                                                             <action selector="textFieldEditingChanged:" destination="utA-pc-hny" eventType="editingChanged" id="mMw-2Q-KRq"/>
                                                         </connections>
                                                     </textField>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fB0-G5-yFZ" userLabel="Separator">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fB0-G5-yFZ">
                                                         <rect key="frame" x="20" y="65" width="335" height="1"/>
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -112,6 +116,10 @@
                                                     <constraint firstAttribute="trailing" secondItem="GdZ-UR-4Fu" secondAttribute="trailing" constant="25" id="wY3-Hz-kkK"/>
                                                     <constraint firstItem="DwR-1r-9BW" firstAttribute="leading" secondItem="M5e-GJ-iny" secondAttribute="leading" constant="20" id="ylh-g9-eJV"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="border" destination="fB0-G5-yFZ" id="9Gi-Co-pkt"/>
+                                                    <outlet property="borderHeight" destination="YTA-rh-Ta5" id="5b1-oe-VLp"/>
+                                                </connections>
                                             </view>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSM-b3-UF8">
                                                 <rect key="frame" x="40" y="196" width="295" height="48"/>
@@ -203,7 +211,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ay-Qf-M9v" userLabel="Sizing View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="298"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mV-1s-lVA">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mV-1s-lVA" customClass="TextFieldContainerView">
                                                 <rect key="frame" x="0.0" y="20" width="375" height="75"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Begin Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hFD-Sa-Rxe">
@@ -225,7 +233,7 @@
                                                             <action selector="textFieldEditingChanged:" destination="TWi-ve-vZ8" eventType="editingChanged" id="bAj-Lw-w76"/>
                                                         </connections>
                                                     </textField>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOx-Ax-NMG" userLabel="Separator">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WOx-Ax-NMG">
                                                         <rect key="frame" x="20" y="65" width="335" height="1"/>
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -245,8 +253,12 @@
                                                     <constraint firstItem="NbB-01-AyS" firstAttribute="leading" secondItem="3mV-1s-lVA" secondAttribute="leading" constant="25" id="geS-yA-Ws1"/>
                                                     <constraint firstAttribute="trailing" secondItem="NbB-01-AyS" secondAttribute="trailing" constant="25" id="iFa-Fc-IJp"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="border" destination="WOx-Ax-NMG" id="T1H-3V-gzx"/>
+                                                    <outlet property="borderHeight" destination="bzZ-Iy-Hgk" id="2JN-7q-JkG"/>
+                                                </connections>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zf-rq-OOu">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6zf-rq-OOu" customClass="TextFieldContainerView">
                                                 <rect key="frame" x="0.0" y="115" width="375" height="75"/>
                                                 <subviews>
                                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yx-7t-3TT">
@@ -268,7 +280,7 @@
                                                             <action selector="textFieldEditingChanged:" destination="TWi-ve-vZ8" eventType="editingChanged" id="bxj-jz-PgF"/>
                                                         </connections>
                                                     </textField>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQH-IY-CyO" userLabel="Separator">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQH-IY-CyO">
                                                         <rect key="frame" x="20" y="65" width="335" height="1"/>
                                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -288,6 +300,10 @@
                                                     <constraint firstItem="iQH-IY-CyO" firstAttribute="top" secondItem="j1s-lC-8e7" secondAttribute="bottom" id="lPw-cI-KVz"/>
                                                     <constraint firstItem="2yx-7t-3TT" firstAttribute="leading" secondItem="6zf-rq-OOu" secondAttribute="leading" constant="20" id="pVu-Q9-eoM"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="border" destination="iQH-IY-CyO" id="N3L-6O-eWF"/>
+                                                    <outlet property="borderHeight" destination="504-bl-uCu" id="zYH-qx-ELF"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q28-MY-obk">
                                                 <rect key="frame" x="0.0" y="190" width="375" height="108"/>
@@ -317,7 +333,6 @@
                                                         </connections>
                                                     </segmentedControl>
                                                 </subviews>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstItem="5Mu-tx-v7l" firstAttribute="centerX" secondItem="Q28-MY-obk" secondAttribute="centerX" id="1Du-ns-fy6"/>
                                                     <constraint firstItem="5Mu-tx-v7l" firstAttribute="top" secondItem="8W0-fv-7Xm" secondAttribute="bottom" constant="6" id="4rQ-iV-Q7i"/>
@@ -362,7 +377,6 @@
                     <tabBarItem key="tabBarItem" title="Between Dates" image="tabbaricon_betweendates" id="VNb-rQ-8Ye"/>
                     <connections>
                         <outlet property="answerLabel" destination="8W0-fv-7Xm" id="UCf-3B-iOe"/>
-                        <outlet property="answerView" destination="Q28-MY-obk" id="Vp2-cs-pbb"/>
                         <outlet property="beginDateField" destination="NbB-01-AyS" id="ZPg-ou-RBO"/>
                         <outlet property="endDateField" destination="j1s-lC-8e7" id="WcS-1H-weP"/>
                         <outlet property="scrollView" destination="bDc-Ux-UIv" id="oxb-PZ-fsV"/>
