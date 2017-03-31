@@ -64,16 +64,18 @@
         && ![self.endDateField.text isEqualToString:@""]) {
         NSString *begin = self.beginDateField.text;
         NSString *end = self.endDateField.text;
-        NSInteger units = 0;
+        NSString *answer = nil;
         if (self.unitControl.selectedSegmentIndex == 0) {
-            units = [DateWrap daysBetweenDates:begin secondDate:end];
+            answer = [NSString stringWithFormat:@"%ld", [DateWrap daysBetweenDates:begin secondDate:end]];
         } else if (self.unitControl.selectedSegmentIndex == 1) {
-            units = [DateWrap weeksBetweenDates:begin secondDate:end];
+            answer = [NSString stringWithFormat:@"%ld", [DateWrap weeksBetweenDates:begin secondDate:end]];
         } else if (self.unitControl.selectedSegmentIndex == 2) {
-            units = [DateWrap monthsBetweenDates:begin secondDate:end];
+            answer = [NSString stringWithFormat:@"%ld", [DateWrap monthsBetweenDates:begin secondDate:end]];
+        } else if (self.unitControl.selectedSegmentIndex == 3) {
+            answer = [DateWrap naturalLanguageBetweenDates:begin secondDate:end];
         }
         
-        self.answerLabel.text = [NSString stringWithFormat:@"%ld", (long)units];
+        self.answerLabel.text = [NSString stringWithFormat:@"%@", answer];
         self.unitControl.hidden = NO;
     } else {
         self.answerLabel.text = @"";

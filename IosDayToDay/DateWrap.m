@@ -110,6 +110,20 @@ static NSString * const DATE_TEMPLATE = @"MMddyyyy";
     }
 }
 
++ (NSString *)naturalLanguageBetweenDates:(NSString *)firstDate
+                               secondDate:(NSString *)secondDate {
+    NSDateFormatter *dateFormat = [DateWrap getFormatter];
+    NSDate *fromDate = [dateFormat dateFromString:firstDate];
+    NSDate *toDate = [dateFormat dateFromString:secondDate];
+    NSTimeInterval interval = fabs([toDate timeIntervalSinceDate:fromDate]);
+    
+    NSDateComponentsFormatter *formatter = [NSDateComponentsFormatter new];
+    formatter.unitsStyle = NSDateComponentsFormatterUnitsStyleFull;
+    formatter.allowedUnits = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitWeekOfMonth | NSCalendarUnitDay;
+    
+    return [formatter stringFromTimeInterval:interval];
+}
+
 /**
  * Get a date formatter populated with the localized date format.
  */
