@@ -25,7 +25,6 @@
 #pragma mark - Private Interface
 
 @interface BetweenDatesViewController()
-@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet DateTextField *beginDateField;
 @property (nonatomic, weak) IBOutlet DateTextField *endDateField;
 @property (nonatomic, weak) IBOutlet UILabel *answerLabel;
@@ -46,28 +45,6 @@
     self.endDateField.dateFormatter = [DateWrap getFormatter];
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWillShow:)
-                                                 name:UIKeyboardWillShowNotification
-                                               object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWillHide:)
-                                                 name:UIKeyboardWillHideNotification
-                                               object:nil];
-}
-
-- (void)viewDidDisappear:(BOOL)animated {
-    [super viewDidDisappear:animated];
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardWillShowNotification
-                                                  object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardWillHideNotification
-                                                  object:nil];
-}
-
 
 #pragma mark - IBAction Methods
 
@@ -77,36 +54,6 @@
 
 - (IBAction)unitChanged:(UISegmentedControl *)sender {
     [self calculateTimeBetween];
-}
-
-
-#pragma mark - Notifications
-
-- (void)keyboardWillShow:(NSNotification *)notification {
-    NSNumber *duration = notification.userInfo[UIKeyboardAnimationDurationUserInfoKey];
-    NSValue *frame = notification.userInfo[UIKeyboardFrameEndUserInfoKey];
-    [UIView animateWithDuration:duration.doubleValue animations:^{
-        UIEdgeInsets insets = self.scrollView.contentInset;
-        insets.bottom = CGRectGetHeight(frame.CGRectValue);
-        self.scrollView.contentInset = insets;
-        
-        insets = self.scrollView.scrollIndicatorInsets;
-        insets.bottom = CGRectGetHeight(frame.CGRectValue);
-        self.scrollView.scrollIndicatorInsets = insets;
-    }];
-}
-
-- (void)keyboardWillHide:(NSNotification *)notification {
-    NSNumber *duration = notification.userInfo[UIKeyboardAnimationDurationUserInfoKey];
-    [UIView animateWithDuration:duration.doubleValue animations:^{
-        UIEdgeInsets insets = self.scrollView.contentInset;
-        insets.bottom = 0.0f;
-        self.scrollView.contentInset = insets;
-        
-        insets = self.scrollView.scrollIndicatorInsets;
-        insets.bottom = 0.0f;
-        self.scrollView.scrollIndicatorInsets = insets;
-    }];
 }
 
 

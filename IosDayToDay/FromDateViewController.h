@@ -18,7 +18,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface FromDateViewController : UIViewController
+@interface FromDateViewController : BaseViewController
 
 @end
