@@ -1,6 +1,8 @@
 //
-//  SecondViewController.h
+//  TextFieldContainerView.m
 //  IosDayToDay
+//
+//  Created by Matt Jones on 3/30/17.
 //
 // Copyright (C) 2013 Doyle Young
 //
@@ -17,9 +19,22 @@
 // limitations under the License.
 //
 
-#import <UIKit/UIKit.h>
-#import "BaseViewController.h"
+#import "TextFieldContainerView.h"
 
-@interface BetweenDatesViewController : BaseViewController
+
+@interface TextFieldContainerView ()
+@property (nonatomic, weak) IBOutlet UIView *border;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *borderHeight;
+@end
+
+@implementation TextFieldContainerView
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    self.border.backgroundColor = [UIColor colorWithWhite:0.15f alpha:1.0f];
+    self.borderHeight.constant = 1.0f / [UIScreen mainScreen].scale;
+    self.layer.shadowOpacity = 0.2f;
+    self.layer.shadowOffset = CGSizeMake(0.0f, 1.0f);
+}
 
 @end

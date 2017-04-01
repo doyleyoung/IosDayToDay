@@ -27,5 +27,7 @@
                     secondDate:(NSString *)secondDate;
 + (NSInteger)monthsBetweenDates:(NSString *)firstDate
                      secondDate:(NSString *)secondDate;
++ (NSString *)naturalLanguageBetweenDates:(NSString *)firstDate
+                               secondDate:(NSString *)secondDate;
 + (NSDateFormatter *)getFormatter;
 @end

@@ -1,6 +1,8 @@
 //
-//  SecondViewController.h
+//  DateTextField.h
 //  IosDayToDay
+//
+//  Created by Matt Jones on 3/30/17.
 //
 // Copyright (C) 2013 Doyle Young
 //
@@ -18,8 +20,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
 
-@interface BetweenDatesViewController : BaseViewController
+@interface DateTextField : UITextField
+
+@property (nonatomic, strong) NSDateFormatter *dateFormatter;
 
 @end

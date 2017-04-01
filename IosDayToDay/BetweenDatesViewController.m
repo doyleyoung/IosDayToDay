@@ -19,25 +19,16 @@
 
 #import "BetweenDatesViewController.h"
 #import "DateWrap.h"
+#import "DateTextField.h"
 
 
 #pragma mark - Private Interface
 
-@interface BetweenDatesViewController() <UITextFieldDelegate>
-@property (nonatomic, weak) IBOutlet UITextField *beginDateField;
-@property (nonatomic, weak) IBOutlet UIButton *beginDateSelectButton;
-@property (nonatomic, weak) IBOutlet UIView *beginDateFieldBorder;
-@property (nonatomic, weak) IBOutlet UIDatePicker *beginDatePicker;
-@property (nonatomic, weak) IBOutlet UIView *endDateAndAnswerView;
-@property (nonatomic, weak) IBOutlet UITextField *endDateField;
-@property (nonatomic, weak) IBOutlet UIButton *endDateSelectButton;
-@property (nonatomic, weak) IBOutlet UIView *endDateFieldBorder;
-@property (nonatomic, weak) IBOutlet UIDatePicker *endDatePicker;
-@property (nonatomic, weak) IBOutlet UIView *answerView;
+@interface BetweenDatesViewController()
+@property (nonatomic, weak) IBOutlet DateTextField *beginDateField;
+@property (nonatomic, weak) IBOutlet DateTextField *endDateField;
 @property (nonatomic, weak) IBOutlet UILabel *answerLabel;
 @property (nonatomic, weak) IBOutlet UISegmentedControl *unitControl;
-@property (nonatomic) BOOL beginDatePickerVisible;
-@property (nonatomic) BOOL endDatePickerVisible;
 @end
 
 
@@ -45,71 +36,19 @@
 
 @implementation BetweenDatesViewController
 
-static CGFloat const ANIMATION_DURATION = 0.3f;
-static CGFloat const SELECT_BUTTON_MARGIN = 12.0f;
-
 
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.beginDateField.placeholder = [[DateWrap getFormatter].dateFormat lowercaseString];
-    self.endDateField.placeholder = [[DateWrap getFormatter].dateFormat lowercaseString];
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-    [self showBeginDatePicker:NO];
-    [self showEndDatePicker:NO];
-}
-
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)orientation
-                                duration:(NSTimeInterval)duration {
-    [self showBeginDatePicker:NO];
-    [self showEndDatePicker:NO];
-}
-
-
-#pragma mark - UITextFieldDelegate Methods
-
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
-    if (textField == self.beginDateField) {
-        [self.beginDateField resignFirstResponder];
-        [self showBeginDatePicker:YES];
-        [self showEndDatePicker:NO];
-    } else if (textField == self.endDateField) {
-        [self.endDateField resignFirstResponder];
-        [self showBeginDatePicker:NO];
-        [self showEndDatePicker:YES];
-    }
-    
-    return NO;
+    self.beginDateField.dateFormatter = [DateWrap getFormatter];
+    self.endDateField.dateFormatter = [DateWrap getFormatter];
 }
 
 
 #pragma mark - IBAction Methods
 
-- (IBAction)dateSelected:(UIButton *)sender {
-    if (sender == self.beginDateSelectButton) {
-        self.beginDateField.text = [[DateWrap getFormatter]
-                                    stringFromDate:self.beginDatePicker.date];
-        [self showBeginDatePicker:NO];
-    } else if (sender == self.endDateSelectButton) {
-        self.endDateField.text = [[DateWrap getFormatter]
-                                  stringFromDate:self.endDatePicker.date];
-        [self showEndDatePicker:NO];
-    }
-    
-    [self calculateTimeBetween];
-}
-
-- (IBAction)dateChanged:(UIDatePicker *)sender {
-    if (sender == self.beginDatePicker) {
-        self.beginDateField.text = [[DateWrap getFormatter] stringFromDate:sender.date];
-    } else if (sender == self.endDatePicker) {
-        self.endDateField.text = [[DateWrap getFormatter] stringFromDate:sender.date];
-    }
-    
+- (IBAction)textFieldEditingChanged:(UITextField *)sender {
     [self calculateTimeBetween];
 }
 
@@ -125,85 +64,21 @@ static CGFloat const SELECT_BUTTON_MARGIN = 12.0f;
         && ![self.endDateField.text isEqualToString:@""]) {
         NSString *begin = self.beginDateField.text;
         NSString *end = self.endDateField.text;
-        NSInteger units = 0;
+        NSString *answer = nil;
         if (self.unitControl.selectedSegmentIndex == 0) {
-            units = [DateWrap daysBetweenDates:begin secondDate:end];
+            answer = [NSString stringWithFormat:@"%ld", [DateWrap daysBetweenDates:begin secondDate:end]];
         } else if (self.unitControl.selectedSegmentIndex == 1) {
-            units = [DateWrap weeksBetweenDates:begin secondDate:end];
+            answer = [NSString stringWithFormat:@"%ld", [DateWrap weeksBetweenDates:begin secondDate:end]];
         } else if (self.unitControl.selectedSegmentIndex == 2) {
-            units = [DateWrap monthsBetweenDates:begin secondDate:end];
+            answer = [NSString stringWithFormat:@"%ld", [DateWrap monthsBetweenDates:begin secondDate:end]];
+        } else if (self.unitControl.selectedSegmentIndex == 3) {
+            answer = [DateWrap naturalLanguageBetweenDates:begin secondDate:end];
         }
         
-        self.answerLabel.text = [NSString stringWithFormat:@"%d", units];
+        self.answerLabel.text = [NSString stringWithFormat:@"%@", answer];
         self.unitControl.hidden = NO;
     } else {
         self.answerLabel.text = @"";
-    }
-}
-
-- (void)showBeginDatePicker:(BOOL)show {
-    if (self.beginDatePickerVisible != show) {
-        self.beginDatePickerVisible = show;
-        self.beginDateSelectButton.userInteractionEnabled = show;
-        
-        id animations = ^{
-            CGFloat modifier = show ? 1.0f : -1.0f;
-            CGRect frame = self.endDateAndAnswerView.frame;
-            frame.origin.y += self.beginDatePicker.frame.size.height * modifier;
-            self.endDateAndAnswerView.frame = frame;
-            
-            CGFloat delta = self.beginDateSelectButton.frame.size.width + SELECT_BUTTON_MARGIN;
-            
-            modifier = show ? -1.0f : 1.0f;
-            frame = self.beginDateField.frame;
-            frame.size.width += delta * modifier;
-            self.beginDateField.frame = frame;
-            
-            frame = self.beginDateFieldBorder.frame;
-            frame.size.width += delta * modifier;
-            self.beginDateFieldBorder.frame = frame;
-            
-            self.beginDateSelectButton.alpha = show ? 1.0f : 0.0f;
-        };
-        
-        [UIView animateWithDuration:ANIMATION_DURATION
-                              delay:0.0f
-                            options:UIViewAnimationOptionCurveEaseOut
-                         animations:animations
-                         completion:NULL];
-    }
-}
-
-- (void)showEndDatePicker:(BOOL)show {
-    if (self.endDatePickerVisible != show) {
-        self.endDatePickerVisible = show;
-        self.endDateSelectButton.userInteractionEnabled = show;
-        
-        id animations = ^{
-            CGFloat modifier = show ? 1.0f : -1.0f;
-            CGRect frame = self.answerView.frame;
-            frame.origin.y += self.endDatePicker.frame.size.height * modifier;
-            self.answerView.frame = frame;
-            
-            CGFloat delta = self.endDateSelectButton.frame.size.width + SELECT_BUTTON_MARGIN;
-            
-            modifier = show ? -1.0f : 1.0f;
-            frame = self.endDateField.frame;
-            frame.size.width += delta * modifier;
-            self.endDateField.frame = frame;
-            
-            frame = self.endDateFieldBorder.frame;
-            frame.size.width += delta * modifier;
-            self.endDateFieldBorder.frame = frame;
-            
-            self.endDateSelectButton.alpha = show ? 1.0f : 0.0f;
-        };
-        
-        [UIView animateWithDuration:ANIMATION_DURATION
-                              delay:0.0f
-                            options:UIViewAnimationOptionCurveEaseOut
-                         animations:animations
-                         completion:NULL];
     }
 }
 

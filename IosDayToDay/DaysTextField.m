@@ -1,6 +1,8 @@
 //
-//  SecondViewController.h
+//  DaysTextField.m
 //  IosDayToDay
+//
+//  Created by Matt Jones on 3/30/17.
 //
 // Copyright (C) 2013 Doyle Young
 //
@@ -17,9 +19,22 @@
 // limitations under the License.
 //
 
-#import <UIKit/UIKit.h>
-#import "BaseViewController.h"
+#import "DaysTextField.h"
+#import "DoneBar.h"
 
-@interface BetweenDatesViewController : BaseViewController
+
+@implementation DaysTextField
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    DoneBar *bar = [DoneBar new];
+    bar.doneButtonItem.target = self;
+    bar.doneButtonItem.action = @selector(doneButtonPressed:);
+    self.inputAccessoryView = bar;
+}
+
+- (void)doneButtonPressed:(UIBarButtonItem *)sender {
+    [self resignFirstResponder];
+}
 
 @end

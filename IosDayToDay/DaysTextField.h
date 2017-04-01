@@ -1,6 +1,8 @@
 //
-//  SecondViewController.h
+//  DaysTextField.h
 //  IosDayToDay
+//
+//  Created by Matt Jones on 3/30/17.
 //
 // Copyright (C) 2013 Doyle Young
 //
@@ -18,8 +20,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseViewController.h"
 
-@interface BetweenDatesViewController : BaseViewController
+@interface DaysTextField : UITextField
 
 @end

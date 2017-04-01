@@ -31,7 +31,7 @@ static NSString * const DATE_TEMPLATE = @"MMddyyyy";
     NSDateFormatter *dateFormat = [DateWrap getFormatter];
     
     NSCalendar *gregorian = [[NSCalendar alloc]
-                             initWithCalendarIdentifier:NSGregorianCalendar];
+                             initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     [offsetComponents setDay:[numDays integerValue]];
@@ -53,9 +53,9 @@ static NSString * const DATE_TEMPLATE = @"MMddyyyy";
                    secondDate:(NSString *)secondDate {
     NSDateComponents *components = [DateWrap componentsBetweenDates:firstDate
                                                          secondDate:secondDate
-                                                              units:NSDayCalendarUnit];
+                                                              units:NSCalendarUnitDay];
     if (components) {
-        return abs([components day]);
+        return ABS([components day]);
     } else {
         // XXX invalid date
         return -1;
@@ -66,9 +66,9 @@ static NSString * const DATE_TEMPLATE = @"MMddyyyy";
                     secondDate:(NSString *)secondDate {
     NSDateComponents *components = [DateWrap componentsBetweenDates:firstDate
                                                          secondDate:secondDate
-                                                              units:NSWeekCalendarUnit];
+                                                              units:NSCalendarUnitWeekOfYear];
     if (components) {
-        return abs([components week]);
+        return ABS([components weekOfYear]);
     } else {
         // XXX invalid date
         return -1;
@@ -79,9 +79,9 @@ static NSString * const DATE_TEMPLATE = @"MMddyyyy";
                      secondDate:(NSString *)secondDate {
     NSDateComponents *components = [DateWrap componentsBetweenDates:firstDate
                                                          secondDate:secondDate
-                                                              units:NSMonthCalendarUnit];
+                                                              units:NSCalendarUnitMonth];
     if (components) {
-        return abs([components month]);
+        return ABS([components month]);
     } else {
         // XXX invalid date
         return -1;
@@ -94,7 +94,7 @@ static NSString * const DATE_TEMPLATE = @"MMddyyyy";
     NSDateFormatter *dateFormat = [DateWrap getFormatter];
     
     NSCalendar *gregorian = [[NSCalendar alloc]
-                             initWithCalendarIdentifier:NSGregorianCalendar];
+                             initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     
     NSDate *fromDate = [dateFormat dateFromString:firstDate];
     NSDate *toDate = [dateFormat dateFromString:secondDate];
@@ -108,6 +108,20 @@ static NSString * const DATE_TEMPLATE = @"MMddyyyy";
         // XXX invalid date
         return nil;
     }
+}
+
++ (NSString *)naturalLanguageBetweenDates:(NSString *)firstDate
+                               secondDate:(NSString *)secondDate {
+    NSDateFormatter *dateFormat = [DateWrap getFormatter];
+    NSDate *fromDate = [dateFormat dateFromString:firstDate];
+    NSDate *toDate = [dateFormat dateFromString:secondDate];
+    NSTimeInterval interval = fabs([toDate timeIntervalSinceDate:fromDate]);
+    
+    NSDateComponentsFormatter *formatter = [NSDateComponentsFormatter new];
+    formatter.unitsStyle = NSDateComponentsFormatterUnitsStyleFull;
+    formatter.allowedUnits = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitWeekOfMonth | NSCalendarUnitDay;
+    
+    return [formatter stringFromTimeInterval:interval];
 }
 
 /**
