@@ -21,23 +21,9 @@
 		CAA506E615563224001F2508 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506E515563224001F2508 /* AppDelegate.m */; };
 		CAA506EF15563224001F2508 /* FromDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506EE15563224001F2508 /* FromDateViewController.m */; };
 		CAA506F615563224001F2508 /* BetweenDatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506F515563224001F2508 /* BetweenDatesViewController.m */; };
-		CAA5070315563224001F2508 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D515563224001F2508 /* UIKit.framework */; };
-		CAA5070415563224001F2508 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D715563224001F2508 /* Foundation.framework */; };
-		CAA5070C15563224001F2508 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAA5070A15563224001F2508 /* InfoPlist.strings */; };
-		CAA5070F15563224001F2508 /* IosDayToDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA5070E15563224001F2508 /* IosDayToDayTests.m */; };
 		CAE583D1155A10FA00D9BC3A /* DateWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE583D0155A10FA00D9BC3A /* DateWrap.m */; };
 		F3600BF817FF9F8A0064DE2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3600BF717FF9F8A0064DE2F /* Images.xcassets */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CAA5070515563224001F2508 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CAA506C815563223001F2508 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CAA506D015563224001F2508;
-			remoteInfo = IosDayToDay;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		344E1F691E8DBB4100901524 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -67,11 +53,6 @@
 		CAA506EE15563224001F2508 /* FromDateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FromDateViewController.m; sourceTree = "<group>"; };
 		CAA506F415563224001F2508 /* BetweenDatesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BetweenDatesViewController.h; sourceTree = "<group>"; };
 		CAA506F515563224001F2508 /* BetweenDatesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BetweenDatesViewController.m; sourceTree = "<group>"; };
-		CAA5070015563224001F2508 /* IosDayToDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IosDayToDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAA5070915563224001F2508 /* IosDayToDayTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IosDayToDayTests-Info.plist"; sourceTree = "<group>"; };
-		CAA5070B15563224001F2508 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CAA5070D15563224001F2508 /* IosDayToDayTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IosDayToDayTests.h; sourceTree = "<group>"; };
-		CAA5070E15563224001F2508 /* IosDayToDayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IosDayToDayTests.m; sourceTree = "<group>"; };
 		CAE583CF155A10FA00D9BC3A /* DateWrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateWrap.h; sourceTree = "<group>"; };
 		CAE583D0155A10FA00D9BC3A /* DateWrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateWrap.m; sourceTree = "<group>"; };
 		F3600BF717FF9F8A0064DE2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -84,15 +65,6 @@
 			files = (
 				344E1F801E8DEC1600901524 /* CoreGraphics.framework in Frameworks */,
 				344E1F7D1E8DEBD100901524 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CAA506FC15563224001F2508 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CAA5070315563224001F2508 /* UIKit.framework in Frameworks */,
-				CAA5070415563224001F2508 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				CAA506DB15563224001F2508 /* IosDayToDay */,
-				CAA5070715563224001F2508 /* IosDayToDayTests */,
 				CAA506D415563224001F2508 /* Frameworks */,
 				CAA506D215563224001F2508 /* Products */,
 			);
@@ -128,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				CAA506D115563224001F2508 /* DayToDay.app */,
-				CAA5070015563224001F2508 /* IosDayToDayTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,25 +136,6 @@
 				CAA506DE15563224001F2508 /* InfoPlist.strings */,
 				CAA506E115563224001F2508 /* main.m */,
 				CAA506E315563224001F2508 /* IosDayToDay-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CAA5070715563224001F2508 /* IosDayToDayTests */ = {
-			isa = PBXGroup;
-			children = (
-				CAA5070D15563224001F2508 /* IosDayToDayTests.h */,
-				CAA5070E15563224001F2508 /* IosDayToDayTests.m */,
-				CAA5070815563224001F2508 /* Supporting Files */,
-			);
-			path = IosDayToDayTests;
-			sourceTree = "<group>";
-		};
-		CAA5070815563224001F2508 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CAA5070915563224001F2508 /* IosDayToDayTests-Info.plist */,
-				CAA5070A15563224001F2508 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -240,25 +191,6 @@
 			productReference = CAA506D115563224001F2508 /* DayToDay.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CAA506FF15563224001F2508 /* IosDayToDayTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CAA5071515563224001F2508 /* Build configuration list for PBXNativeTarget "IosDayToDayTests" */;
-			buildPhases = (
-				CAA506FB15563224001F2508 /* Sources */,
-				CAA506FC15563224001F2508 /* Frameworks */,
-				CAA506FD15563224001F2508 /* Resources */,
-				CAA506FE15563224001F2508 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CAA5070615563224001F2508 /* PBXTargetDependency */,
-			);
-			name = IosDayToDayTests;
-			productName = IosDayToDayTests;
-			productReference = CAA5070015563224001F2508 /* IosDayToDayTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -287,7 +219,6 @@
 			projectRoot = "";
 			targets = (
 				CAA506D015563224001F2508 /* IosDayToDay */,
-				CAA506FF15563224001F2508 /* IosDayToDayTests */,
 			);
 		};
 /* End PBXProject section */
@@ -304,31 +235,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CAA506FD15563224001F2508 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CAA5070C15563224001F2508 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		CAA506FE15563224001F2508 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CAA506CD15563224001F2508 /* Sources */ = {
@@ -348,37 +255,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CAA506FB15563224001F2508 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CAA5070F15563224001F2508 /* IosDayToDayTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CAA5070615563224001F2508 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CAA506D015563224001F2508 /* IosDayToDay */;
-			targetProxy = CAA5070515563224001F2508 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CAA506DE15563224001F2508 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				CAA506DF15563224001F2508 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CAA5070A15563224001F2508 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAA5070B15563224001F2508 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -519,40 +402,6 @@
 			};
 			name = Release;
 		};
-		CAA5071615563224001F2508 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IosDayToDay.app/IosDayToDay";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IosDayToDay/IosDayToDay-Prefix.pch";
-				INFOPLIST_FILE = "IosDayToDayTests/IosDayToDayTests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "mobi.daytoday.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		CAA5071715563224001F2508 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IosDayToDay.app/IosDayToDay";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IosDayToDay/IosDayToDay-Prefix.pch";
-				INFOPLIST_FILE = "IosDayToDayTests/IosDayToDayTests-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "mobi.daytoday.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -570,15 +419,6 @@
 			buildConfigurations = (
 				CAA5071315563224001F2508 /* Debug */,
 				CAA5071415563224001F2508 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CAA5071515563224001F2508 /* Build configuration list for PBXNativeTarget "IosDayToDayTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CAA5071615563224001F2508 /* Debug */,
-				CAA5071715563224001F2508 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
