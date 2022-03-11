@@ -199,6 +199,7 @@
 			attributes = {
 				LastTestingUpgradeCheck = 0610;
 				LastUpgradeCheck = 1320;
+				ORGANIZATIONNAME = "Doyle Young";
 				TargetAttributes = {
 					CAA506D015563224001F2508 = {
 						DevelopmentTeam = XMFN7464E4;
