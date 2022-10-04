@@ -7,90 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		344E1F6A1E8DBB4100901524 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344E1F691E8DBB4100901524 /* Main.storyboard */; };
-		344E1F6E1E8DBD1600901524 /* DoneBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E1F6D1E8DBD1600901524 /* DoneBar.m */; };
-		344E1F701E8DBEF200901524 /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344E1F6F1E8DBEF200901524 /* Launch.storyboard */; };
-		344E1F731E8DCAD900901524 /* DaysTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E1F721E8DCAD900901524 /* DaysTextField.m */; };
-		344E1F761E8DCC5100901524 /* DateTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E1F751E8DCC5100901524 /* DateTextField.m */; };
-		344E1F791E8DDEBD00901524 /* TextFieldContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E1F781E8DDEBD00901524 /* TextFieldContainerView.m */; };
-		344E1F7C1E8DE2DB00901524 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 344E1F7B1E8DE2DB00901524 /* BaseViewController.m */; };
-		344E1F7D1E8DEBD100901524 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D515563224001F2508 /* UIKit.framework */; };
-		344E1F801E8DEC1600901524 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA506D915563224001F2508 /* CoreGraphics.framework */; };
-		CAA506E015563224001F2508 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CAA506DE15563224001F2508 /* InfoPlist.strings */; };
-		CAA506E215563224001F2508 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506E115563224001F2508 /* main.m */; };
-		CAA506E615563224001F2508 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506E515563224001F2508 /* AppDelegate.m */; };
-		CAA506EF15563224001F2508 /* FromDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506EE15563224001F2508 /* FromDateViewController.m */; };
-		CAA506F615563224001F2508 /* BetweenDatesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAA506F515563224001F2508 /* BetweenDatesViewController.m */; };
-		CAE583D1155A10FA00D9BC3A /* DateWrap.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE583D0155A10FA00D9BC3A /* DateWrap.m */; };
-		F3600BF817FF9F8A0064DE2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3600BF717FF9F8A0064DE2F /* Images.xcassets */; };
+		F32D840428A44426006E6FD5 /* NumberField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D840328A44426006E6FD5 /* NumberField.swift */; };
+		F32D840628A445E8006E6FD5 /* DateField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D840528A445E8006E6FD5 /* DateField.swift */; };
+		F32D840928A447D2006E6FD5 /* Date+DayToDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32D840828A447D2006E6FD5 /* Date+DayToDay.swift */; };
+		F339ED4F27DAF16400B487A4 /* Day2DayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F339ED4E27DAF16400B487A4 /* Day2DayApp.swift */; };
+		F339ED5127DAF16400B487A4 /* FromDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F339ED5027DAF16400B487A4 /* FromDateView.swift */; };
+		F339ED5327DAF16500B487A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F339ED5227DAF16500B487A4 /* Assets.xcassets */; };
+		F3E789AA28A1551400062F21 /* BetweenDatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E789A928A1551400062F21 /* BetweenDatesView.swift */; };
+		F3E789AD28A1ADA500062F21 /* AnswerText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E789AC28A1ADA500062F21 /* AnswerText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		344E1F691E8DBB4100901524 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		344E1F6C1E8DBD1600901524 /* DoneBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoneBar.h; sourceTree = "<group>"; };
-		344E1F6D1E8DBD1600901524 /* DoneBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoneBar.m; sourceTree = "<group>"; };
-		344E1F6F1E8DBEF200901524 /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
-		344E1F711E8DCAD900901524 /* DaysTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaysTextField.h; sourceTree = "<group>"; };
-		344E1F721E8DCAD900901524 /* DaysTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaysTextField.m; sourceTree = "<group>"; };
-		344E1F741E8DCC5100901524 /* DateTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTextField.h; sourceTree = "<group>"; };
-		344E1F751E8DCC5100901524 /* DateTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTextField.m; sourceTree = "<group>"; };
-		344E1F771E8DDEBD00901524 /* TextFieldContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldContainerView.h; sourceTree = "<group>"; };
-		344E1F781E8DDEBD00901524 /* TextFieldContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextFieldContainerView.m; sourceTree = "<group>"; };
-		344E1F7A1E8DE2DB00901524 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		344E1F7B1E8DE2DB00901524 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		CA5F34091696837C0053FBD2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		CAA506D115563224001F2508 /* DayToDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayToDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAA506D515563224001F2508 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		CAA506D715563224001F2508 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		CAA506D915563224001F2508 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CAA506DD15563224001F2508 /* IosDayToDay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IosDayToDay-Info.plist"; sourceTree = "<group>"; };
-		CAA506DF15563224001F2508 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CAA506E115563224001F2508 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CAA506E315563224001F2508 /* IosDayToDay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IosDayToDay-Prefix.pch"; sourceTree = "<group>"; };
-		CAA506E415563224001F2508 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CAA506E515563224001F2508 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CAA506ED15563224001F2508 /* FromDateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FromDateViewController.h; sourceTree = "<group>"; };
-		CAA506EE15563224001F2508 /* FromDateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FromDateViewController.m; sourceTree = "<group>"; };
-		CAA506F415563224001F2508 /* BetweenDatesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BetweenDatesViewController.h; sourceTree = "<group>"; };
-		CAA506F515563224001F2508 /* BetweenDatesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BetweenDatesViewController.m; sourceTree = "<group>"; };
-		CAE583CF155A10FA00D9BC3A /* DateWrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateWrap.h; sourceTree = "<group>"; };
-		CAE583D0155A10FA00D9BC3A /* DateWrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateWrap.m; sourceTree = "<group>"; };
-		F3600BF717FF9F8A0064DE2F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F31A7AFB28EBBBFE00378A1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F32D840328A44426006E6FD5 /* NumberField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberField.swift; sourceTree = "<group>"; };
+		F32D840528A445E8006E6FD5 /* DateField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateField.swift; sourceTree = "<group>"; };
+		F32D840828A447D2006E6FD5 /* Date+DayToDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+DayToDay.swift"; sourceTree = "<group>"; };
+		F339ED4C27DAF16400B487A4 /* DayToDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayToDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F339ED4E27DAF16400B487A4 /* Day2DayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2DayApp.swift; sourceTree = "<group>"; };
+		F339ED5027DAF16400B487A4 /* FromDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FromDateView.swift; sourceTree = "<group>"; };
+		F339ED5227DAF16500B487A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3E789A928A1551400062F21 /* BetweenDatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetweenDatesView.swift; sourceTree = "<group>"; };
+		F3E789AC28A1ADA500062F21 /* AnswerText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CAA506CE15563224001F2508 /* Frameworks */ = {
+		F339ED4927DAF16400B487A4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				344E1F801E8DEC1600901524 /* CoreGraphics.framework in Frameworks */,
-				344E1F7D1E8DEBD100901524 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		344E1F6B1E8DBC7500901524 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				344E1F6C1E8DBD1600901524 /* DoneBar.h */,
-				344E1F6D1E8DBD1600901524 /* DoneBar.m */,
-				344E1F711E8DCAD900901524 /* DaysTextField.h */,
-				344E1F721E8DCAD900901524 /* DaysTextField.m */,
-				344E1F741E8DCC5100901524 /* DateTextField.h */,
-				344E1F751E8DCC5100901524 /* DateTextField.m */,
-				344E1F771E8DDEBD00901524 /* TextFieldContainerView.h */,
-				344E1F781E8DDEBD00901524 /* TextFieldContainerView.m */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		CAA506C615563223001F2508 = {
 			isa = PBXGroup;
 			children = (
-				CAA506DB15563224001F2508 /* IosDayToDay */,
-				CAA506D415563224001F2508 /* Frameworks */,
+				F339ED4D27DAF16400B487A4 /* DayToDay */,
 				CAA506D215563224001F2508 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,97 +52,61 @@
 		CAA506D215563224001F2508 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CAA506D115563224001F2508 /* DayToDay.app */,
+				F339ED4C27DAF16400B487A4 /* DayToDay.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CAA506D415563224001F2508 /* Frameworks */ = {
+		F32D840728A4479F006E6FD5 /* Date Math */ = {
 			isa = PBXGroup;
 			children = (
-				CA5F34091696837C0053FBD2 /* QuartzCore.framework */,
-				CAA506D515563224001F2508 /* UIKit.framework */,
-				CAA506D715563224001F2508 /* Foundation.framework */,
-				CAA506D915563224001F2508 /* CoreGraphics.framework */,
+				F32D840828A447D2006E6FD5 /* Date+DayToDay.swift */,
 			);
-			name = Frameworks;
+			path = "Date Math";
 			sourceTree = "<group>";
 		};
-		CAA506DB15563224001F2508 /* IosDayToDay */ = {
+		F339ED4D27DAF16400B487A4 /* DayToDay */ = {
 			isa = PBXGroup;
 			children = (
-				F3600BFA17FFA15D0064DE2F /* Date Math */,
-				344E1F6B1E8DBC7500901524 /* Views */,
-				F3600BF917FFA1330064DE2F /* Controllers */,
-				F357D7711803BC10009176A7 /* Storyboards */,
-				CAA506E415563224001F2508 /* AppDelegate.h */,
-				CAA506E515563224001F2508 /* AppDelegate.m */,
-				F3600BF717FF9F8A0064DE2F /* Images.xcassets */,
-				CAA506DC15563224001F2508 /* Supporting Files */,
+				F32D840728A4479F006E6FD5 /* Date Math */,
+				F3E789AB28A1AD6100062F21 /* Components */,
+				F339ED4E27DAF16400B487A4 /* Day2DayApp.swift */,
+				F339ED5027DAF16400B487A4 /* FromDateView.swift */,
+				F3E789A928A1551400062F21 /* BetweenDatesView.swift */,
+				F339ED5227DAF16500B487A4 /* Assets.xcassets */,
+				F31A7AFB28EBBBFE00378A1A /* Info.plist */,
 			);
-			path = IosDayToDay;
+			path = DayToDay;
 			sourceTree = "<group>";
 		};
-		CAA506DC15563224001F2508 /* Supporting Files */ = {
+		F3E789AB28A1AD6100062F21 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				CAA506DD15563224001F2508 /* IosDayToDay-Info.plist */,
-				CAA506DE15563224001F2508 /* InfoPlist.strings */,
-				CAA506E115563224001F2508 /* main.m */,
-				CAA506E315563224001F2508 /* IosDayToDay-Prefix.pch */,
+				F32D840328A44426006E6FD5 /* NumberField.swift */,
+				F32D840528A445E8006E6FD5 /* DateField.swift */,
+				F3E789AC28A1ADA500062F21 /* AnswerText.swift */,
 			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F357D7711803BC10009176A7 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				344E1F6F1E8DBEF200901524 /* Launch.storyboard */,
-				344E1F691E8DBB4100901524 /* Main.storyboard */,
-			);
-			name = Storyboards;
-			sourceTree = "<group>";
-		};
-		F3600BF917FFA1330064DE2F /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				344E1F7A1E8DE2DB00901524 /* BaseViewController.h */,
-				344E1F7B1E8DE2DB00901524 /* BaseViewController.m */,
-				CAA506ED15563224001F2508 /* FromDateViewController.h */,
-				CAA506EE15563224001F2508 /* FromDateViewController.m */,
-				CAA506F415563224001F2508 /* BetweenDatesViewController.h */,
-				CAA506F515563224001F2508 /* BetweenDatesViewController.m */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		F3600BFA17FFA15D0064DE2F /* Date Math */ = {
-			isa = PBXGroup;
-			children = (
-				CAE583CF155A10FA00D9BC3A /* DateWrap.h */,
-				CAE583D0155A10FA00D9BC3A /* DateWrap.m */,
-			);
-			name = "Date Math";
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CAA506D015563224001F2508 /* IosDayToDay */ = {
+		F339ED4B27DAF16400B487A4 /* DayToDay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CAA5071215563224001F2508 /* Build configuration list for PBXNativeTarget "IosDayToDay" */;
+			buildConfigurationList = F339ED5727DAF16500B487A4 /* Build configuration list for PBXNativeTarget "DayToDay" */;
 			buildPhases = (
-				CAA506CD15563224001F2508 /* Sources */,
-				CAA506CE15563224001F2508 /* Frameworks */,
-				CAA506CF15563224001F2508 /* Resources */,
+				F339ED4827DAF16400B487A4 /* Sources */,
+				F339ED4927DAF16400B487A4 /* Frameworks */,
+				F339ED4A27DAF16400B487A4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = IosDayToDay;
-			productName = IosDayToDay;
-			productReference = CAA506D115563224001F2508 /* DayToDay.app */;
+			name = DayToDay;
+			productName = Day2Day;
+			productReference = F339ED4C27DAF16400B487A4 /* DayToDay.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -197,12 +115,14 @@
 		CAA506C815563223001F2508 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1320;
 				LastTestingUpgradeCheck = 0610;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1330;
 				ORGANIZATIONNAME = "Doyle Young";
 				TargetAttributes = {
-					CAA506D015563224001F2508 = {
-						DevelopmentTeam = XMFN7464E4;
+					F339ED4B27DAF16400B487A4 = {
+						CreatedOnToolsVersion = 13.2.1;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -219,55 +139,38 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CAA506D015563224001F2508 /* IosDayToDay */,
+				F339ED4B27DAF16400B487A4 /* DayToDay */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CAA506CF15563224001F2508 /* Resources */ = {
+		F339ED4A27DAF16400B487A4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAA506E015563224001F2508 /* InfoPlist.strings in Resources */,
-				344E1F6A1E8DBB4100901524 /* Main.storyboard in Resources */,
-				F3600BF817FF9F8A0064DE2F /* Images.xcassets in Resources */,
-				344E1F701E8DBEF200901524 /* Launch.storyboard in Resources */,
+				F339ED5327DAF16500B487A4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CAA506CD15563224001F2508 /* Sources */ = {
+		F339ED4827DAF16400B487A4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				344E1F6E1E8DBD1600901524 /* DoneBar.m in Sources */,
-				344E1F7C1E8DE2DB00901524 /* BaseViewController.m in Sources */,
-				344E1F761E8DCC5100901524 /* DateTextField.m in Sources */,
-				CAA506E215563224001F2508 /* main.m in Sources */,
-				CAA506E615563224001F2508 /* AppDelegate.m in Sources */,
-				CAA506EF15563224001F2508 /* FromDateViewController.m in Sources */,
-				344E1F731E8DCAD900901524 /* DaysTextField.m in Sources */,
-				344E1F791E8DDEBD00901524 /* TextFieldContainerView.m in Sources */,
-				CAA506F615563224001F2508 /* BetweenDatesViewController.m in Sources */,
-				CAE583D1155A10FA00D9BC3A /* DateWrap.m in Sources */,
+				F32D840628A445E8006E6FD5 /* DateField.swift in Sources */,
+				F32D840428A44426006E6FD5 /* NumberField.swift in Sources */,
+				F32D840928A447D2006E6FD5 /* Date+DayToDay.swift in Sources */,
+				F339ED5127DAF16400B487A4 /* FromDateView.swift in Sources */,
+				F3E789AA28A1551400062F21 /* BetweenDatesView.swift in Sources */,
+				F339ED4F27DAF16400B487A4 /* Day2DayApp.swift in Sources */,
+				F3E789AD28A1ADA500062F21 /* AnswerText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CAA506DE15563224001F2508 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CAA506DF15563224001F2508 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CAA5071015563224001F2508 /* Debug */ = {
@@ -315,7 +218,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -360,46 +263,109 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		CAA5071315563224001F2508 /* Debug */ = {
+		F339ED5827DAF16500B487A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IosDayToDay/IosDayToDay-Prefix.pch";
-				INFOPLIST_FILE = "IosDayToDay/IosDayToDay-Info.plist";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 3.0.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DayToDay/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DayToDay;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 3.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "mobi.daytoday.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = DayToDay;
-				PROVISIONING_PROFILE = "";
-				WRAPPER_EXTENSION = app;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CAA5071415563224001F2508 /* Release */ = {
+		F339ED5927DAF16500B487A4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IosDayToDay/IosDayToDay-Prefix.pch";
-				INFOPLIST_FILE = "IosDayToDay/IosDayToDay-Info.plist";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Apple Distribution";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 3.0.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DayToDay/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DayToDay;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 3.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "mobi.daytoday.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = DayToDay;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				WRAPPER_EXTENSION = app;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -415,11 +381,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CAA5071215563224001F2508 /* Build configuration list for PBXNativeTarget "IosDayToDay" */ = {
+		F339ED5727DAF16500B487A4 /* Build configuration list for PBXNativeTarget "DayToDay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CAA5071315563224001F2508 /* Debug */,
-				CAA5071415563224001F2508 /* Release */,
+				F339ED5827DAF16500B487A4 /* Debug */,
+				F339ED5927DAF16500B487A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
