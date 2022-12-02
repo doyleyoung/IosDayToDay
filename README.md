@@ -22,12 +22,12 @@ questions, please let me know.
 Developed by
 ============
 * Doyle Young - dyoung@gmail.com
-* [Matt Jones](https://github.com/mrketchup) - iOS 7 update 
+* [Matt Jones](https://github.com/mrketchup)
 
 License
 =======
 
-    Copyright 2012-2013 Doyle Young
+    Copyright 2012-2022 Doyle Young
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
